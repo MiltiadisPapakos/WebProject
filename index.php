@@ -2,7 +2,8 @@
 session_start();
 
 if(isset($_SESSION['uid'])) {
-    echo json_encode(array('success'=>true));
+    $isAdmin = $_SESSION['is_admin'];
+    echo json_encode(array('success'=>true, 'isAdmin'=>$isAdmin));
 }
 else{
     echo json_encode(array('success'=>false));
