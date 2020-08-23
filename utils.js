@@ -25,3 +25,19 @@ function phpRequest(url, method, headers, credentials, onSuccess, onFailure){
             onFailure(reason)
         })
 }
+
+function getUserData(url, onSuccess) {
+    simplePhpPostRequest(
+        url,
+        {},
+        res => {
+            res.json()
+                .then(res => {
+                    onSuccess(res)
+                })
+        },
+        reason => {
+
+        }
+    )
+}

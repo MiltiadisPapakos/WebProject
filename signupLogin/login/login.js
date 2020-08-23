@@ -32,7 +32,7 @@ function findUser(userInput, passwordHash, usernameUsed){
 }
 
 
-function onClick(){
+function onClick(event){
     let userInputValue = userInput.value
     let password = passwordInput.value
     //true for username, false for email

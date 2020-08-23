@@ -1,5 +1,5 @@
 <?php
-include "../utils.php";
+include "../../utils.php";
 include "passwordGenerator.php";
 
 $connection = connectToDb();

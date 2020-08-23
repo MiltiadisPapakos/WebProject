@@ -12,7 +12,7 @@ function emailIsCorrect(email){
 }
 
 
-function onClick(){
+function onClick(event){
     let email = emailInput.value
     let credentials = {
         email: email

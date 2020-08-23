@@ -1,0 +1,36 @@
+h3 {position: relative; left: 1em}
+img {
+    max-width: 80%;
+    position: relative;
+    left: 2em;
+}
+p{font-size: small}
+#map_id{height: 350px}
+
+.twoColumn{
+    width: 49%;
+    float:left;
+    left: 2em;
+    /*height: 80%;*/
+}
+
+.oneColumn{
+    width: 100%;
+    float: right;
+    text-align: center;
+    /*position: relative;*/
+    /*top: 3em;*/
+    /*left: 30em;*/
+    /*width: 500px;*/
+    /*height: 30px;*/
+    /*align-content: center;*/
+}
+
+.leftButton{
+    position: relative;
+    left: 18em;
+}
+
+.details{
+    color: dimgrey;
+}

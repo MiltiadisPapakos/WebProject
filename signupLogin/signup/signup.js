@@ -102,7 +102,7 @@ function addUser(uid, username, firstName, lastName, email, passwordHash, isAdmi
 
 }
 
-function onClick(){
+function onClick(event){
     let username = usernameInput.value
     let firstName = firstNameInput.value
     let lastName = lastNameInput.value

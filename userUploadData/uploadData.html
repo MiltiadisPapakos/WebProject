@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Site Name</title>
+    <link rel="stylesheet" type="text/css" href="uploadData.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="../utils.js" defer></script>
+    <script src="uploadData.js" defer></script>
+    <script src="createMap.js" defer></script>
+</head>
+
+<body>
+
+    <h3>Upload your data!</h3>
+
+    <br>
+
+    <div>
+        <div id="map_id" class="twoColumn"></div>
+
+        <div class="twoColumn" style="text-align: center">
+            <br><br><br>
+            <input id="upload_file_input" type="file" accept=".json">
+        </div>
+
+    </div>
+
+
+    <div class="oneColumn">
+        <br>
+        <p class="details">Some detailed instructions about what to do.</p>
+        <br>
+        <button id="map_upload_button" class="leftButton">Upload!</button>
+    </div>
+
+</body>
+
+</html>
