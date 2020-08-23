@@ -15,6 +15,8 @@ function findUser(userInput, passwordHash, usernameUsed){
                     if (res['failed'] === false) {
                         console.log(res['uid'])
                         console.log(res['username'])
+                        console.log(res['firstName'])
+                        console.log(res['lastName'])
                         console.log(res['email'])
                         console.log(res['isAdmin'])
                         window.location.replace("http://localhost:63342/WebProject/userMain/userMain.html")

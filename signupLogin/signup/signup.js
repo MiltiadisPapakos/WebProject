@@ -39,7 +39,23 @@ function isUsernameCorrect(username){
     return true
 }
 
-function IsEmailCorrect(email){
+function isFirstNameCorrect(firstName){
+    if (firstName.length === 0){
+        errorMessageSpan.textContent = "Please enter your first name."
+        return false
+    }
+    return true
+}
+
+function isLastNameCorrect(lastName){
+    if(lastName.length === 0){
+        errorMessageSpan.textContent = "Please enter your last name."
+        return false
+    }
+    return true
+}
+
+function isEmailCorrect(email){
     if (email.length === 0){
         errorMessageSpan.textContent = "Please enter an email address."
         return false
@@ -51,10 +67,12 @@ function IsEmailCorrect(email){
     return true
 }
 
-function addUser(uid, username, email, passwordHash, isAdmin){
+function addUser(uid, username, firstName, lastName, email, passwordHash, isAdmin){
     let credentials = {
         uid: uid,
         username: username,
+        firstName: firstName,
+        lastName: lastName,
         email: email,
         password: passwordHash,
         isAdmin: isAdmin.toString()
@@ -86,23 +104,29 @@ function addUser(uid, username, email, passwordHash, isAdmin){
 
 function onClick(){
     let username = usernameInput.value
+    let firstName = firstNameInput.value
+    let lastName = lastNameInput.value
     let password = passwordInput.value
     let email = emailInput.value
 
     if(
         isPasswordCorrect(password, verifyPasswordInput.value) &&
-        IsEmailCorrect(email) &&
+        isFirstNameCorrect(firstName) &&
+        isLastNameCorrect(lastName) &&
+        isEmailCorrect(email) &&
         isUsernameCorrect(username)
     ){
         let md5Password = md5(password)
         let uid = md5(email, password)
         let isAdmin = false
 
-        addUser(uid, username, email, md5Password, isAdmin)
+        addUser(uid, username, firstName, lastName, email, md5Password, isAdmin)
     }
 }
 
 let usernameInput = document.querySelector("#su_username_input")
+let firstNameInput = document.querySelector("#su_first_name_input")
+let lastNameInput = document.querySelector("#su_last_name_input")
 let emailInput = document.querySelector("#su_email_input")
 let passwordInput = document.querySelector("#su_password_input")
 let verifyPasswordInput = document.querySelector("#su_verify_pw_input")

@@ -33,17 +33,21 @@ if(is_null($row)){
 else{
     $uid = $row['uid'];
     $username = $row['username'];
+    $firstName = $row['first_name'];
+    $lastName = $row['last_name'];
     $email = $row['email'];
     $password = $row['password'];
     $isAdmin = $row['is_admin'];
 
     $_SESSION['uid'] = $uid;
     $_SESSION['username'] = $username;
+    $_SESSION['first_name'] = $firstName;
+    $_SESSION['last_name'] = $lastName;
     $_SESSION['email'] = $email;
     $_SESSION['password'] = $password;
     $_SESSION['is_admin'] = $isAdmin;
 
-    $jsonArray = array('uid'=>$uid, 'username'=>$username, 'email'=>$email, 'password'=>$password, 'isAdmin'=>$isAdmin, 'failed'=>false);
+    $jsonArray = array('uid'=>$uid, 'username'=>$username, 'firstName'=>$firstName, 'lastName'=>$lastName,'email'=>$email, 'password'=>$password, 'isAdmin'=>$isAdmin, 'failed'=>false);
     echo json_encode($jsonArray);
 }
 
