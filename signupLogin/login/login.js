@@ -16,9 +16,8 @@ function findUser(userInput, passwordHash, usernameUsed){
                         console.log(res['uid'])
                         console.log(res['username'])
                         console.log(res['email'])
-                        console.log(res['password'])
                         console.log(res['isAdmin'])
-                        alert("Log In was successful.")
+                        window.location.replace("http://localhost:63342/WebProject/userMain/userMain.html")
                     }
                     else{
                         logInErrorSpan.innerHTML = "Log in failed.<br>Please make sure your credentials are correct and try again."

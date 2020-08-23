@@ -1,6 +1,4 @@
-const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-
-function passwordIsCorrect(password, verificationPassword){
+function isPasswordCorrect(password, verificationPassword){
     if (password !== verificationPassword){
         errorMessageSpan.textContent = "The password and the verification password don't match."
         return false
@@ -29,7 +27,7 @@ function passwordIsCorrect(password, verificationPassword){
     return true
 }
 
-function usernameIsCorrect(username){
+function isUsernameCorrect(username){
     if (username.length === 0){
         errorMessageSpan.textContent = "Please enter a username."
         return false
@@ -41,7 +39,7 @@ function usernameIsCorrect(username){
     return true
 }
 
-function emailIsCorrect(email){
+function IsEmailCorrect(email){
     if (email.length === 0){
         errorMessageSpan.textContent = "Please enter an email address."
         return false
@@ -64,12 +62,21 @@ function addUser(uid, username, email, passwordHash, isAdmin){
 
     let url = "http://localhost:63342/WebProject/signupLogin/signup/signup.php"
     simplePhpPostRequest(url, credentials,
-        _ => {
-            alert("Sign up was successful.")
-            usernameInput.value = ""
-            emailInput.value = ""
-            passwordInput.value = ""
-            verifyPasswordInput.value = ""
+        res => {
+            res.json()
+                .then(res => {
+                    let success = res['success']
+                    if (success){
+                        window.location.replace("http://localhost:63342/WebProject/userMain/userMain.html")
+                        usernameInput.value = ""
+                        emailInput.value = ""
+                        passwordInput.value = ""
+                        verifyPasswordInput.value = ""
+                    }
+                    else{
+                        alert("Sign up failed. Please try again.")
+                    }
+                })
         },
         _ => {
             alert("Sign up failed. Please try again.")
@@ -83,9 +90,9 @@ function onClick(){
     let email = emailInput.value
 
     if(
-        passwordIsCorrect(password, verifyPasswordInput.value) &&
-        emailIsCorrect(email) &&
-        usernameIsCorrect(username)
+        isPasswordCorrect(password, verifyPasswordInput.value) &&
+        IsEmailCorrect(email) &&
+        isUsernameCorrect(username)
     ){
         let md5Password = md5(password)
         let uid = md5(email, password)

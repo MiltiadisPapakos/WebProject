@@ -10,19 +10,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Minor changes">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signupLogin/login/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signupLogin/login/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signupLogin/login/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signupLogin/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signupLogin/utils.php" afterDir="false" />
+    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Added log in screen and functionality.">
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signupLogin/forgotPassword/forgotPassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signupLogin/forgotPassword/forgotPassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signupLogin/forgotPassword/forgotPassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/signupLogin/forgotPassword/passwordGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userMain/userMain.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/orange.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/orange.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signupLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signupLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signupLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -65,14 +70,15 @@
     <property name="settings.editor.selected.configurable" value="settings.json.schema" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libraries" />
+      <recent name="$PROJECT_DIR$/signup" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/signupLogin" />
       <recent name="$PROJECT_DIR$/signUpLogIn" />
       <recent name="$PROJECT_DIR$/login" />
-      <recent name="$PROJECT_DIR$/signup" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libraries" />
       <recent name="$PROJECT_DIR$/signup" />
     </key>
   </component>
@@ -89,6 +95,7 @@
       <updated>1598129733382</updated>
       <workItem from="1598129734578" duration="9568000" />
       <workItem from="1598170204301" duration="10001000" />
+      <workItem from="1598187688279" duration="9094000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1598171427032</created>
@@ -97,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598171427032</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added log in screen and functionality.">
+      <created>1598187731484</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598187731484</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,10 +127,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
+    <MESSAGE value="Added log in screen and functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added log in screen and functionality." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1024" y="27" width="694" height="741" key="#PHP" timestamp="1598138004348">
@@ -139,34 +155,34 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1373" y="74" width="657" height="654" key="Github.UntrackedFilesDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171983649" />
-    <state width="1035" height="251" key="GridCell.Tab.0.bottom" timestamp="1598179367390">
+    <state width="1035" height="251" key="GridCell.Tab.0.bottom" timestamp="1598194479774">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="251" key="GridCell.Tab.0.bottom/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598179367390" />
-    <state width="1035" height="251" key="GridCell.Tab.0.center" timestamp="1598179367390">
+    <state width="1035" height="251" key="GridCell.Tab.0.bottom/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598194479774" />
+    <state width="1035" height="251" key="GridCell.Tab.0.center" timestamp="1598194479774">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="251" key="GridCell.Tab.0.center/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598179367390" />
-    <state width="1035" height="251" key="GridCell.Tab.0.left" timestamp="1598179367390">
+    <state width="1035" height="251" key="GridCell.Tab.0.center/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598194479774" />
+    <state width="1035" height="251" key="GridCell.Tab.0.left" timestamp="1598194479774">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="251" key="GridCell.Tab.0.left/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598179367390" />
-    <state width="1035" height="251" key="GridCell.Tab.0.right" timestamp="1598179367390">
+    <state width="1035" height="251" key="GridCell.Tab.0.left/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598194479774" />
+    <state width="1035" height="251" key="GridCell.Tab.0.right" timestamp="1598194479774">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="251" key="GridCell.Tab.0.right/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598179367390" />
-    <state x="1503" y="322" width="397" height="158" key="NewPhpFileDialog" timestamp="1598176164421">
+    <state width="1035" height="251" key="GridCell.Tab.0.right/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598194479774" />
+    <state x="1503" y="322" width="397" height="158" key="NewPhpFileDialog" timestamp="1598195847665">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state x="1503" y="322" width="397" height="158" key="NewPhpFileDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598176164421" />
+    <state x="1503" y="322" width="397" height="158" key="NewPhpFileDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598195847665" />
     <state x="1196" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1598171927484">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1196" y="31" width="1022" height="737" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171927484" />
-    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598179792572">
+    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598187733751">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598179792572" />
+    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598187733751" />
     <state x="1490" y="311" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598139406450">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
@@ -175,9 +191,9 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1371" y="174" key="run.anything.popup/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598178364424" />
-    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1598171959132">
+    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1598196013329">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171959132" />
+    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598196013329" />
   </component>
 </project>

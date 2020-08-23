@@ -1,6 +1,7 @@
 <?php
 include '../utils.php';
 
+session_start();
 $connection = connectToDb();
 
 if(mysqli_connect_errno()){
@@ -14,7 +15,7 @@ $usernameUsed = $credentials['usernameUsed'];
 $password = $credentials['password'];
 
 
-if($usernameUsed == false){
+if($usernameUsed == 'true'){
     $username = $credentials['userInput'];
     $query = "SELECT * FROM users WHERE username = \"$username\" AND password = \"$password\"";
 }
@@ -35,6 +36,13 @@ else{
     $email = $row['email'];
     $password = $row['password'];
     $isAdmin = $row['is_admin'];
+
+    $_SESSION['uid'] = $uid;
+    $_SESSION['username'] = $username;
+    $_SESSION['email'] = $email;
+    $_SESSION['password'] = $password;
+    $_SESSION['is_admin'] = $isAdmin;
+
     $jsonArray = array('uid'=>$uid, 'username'=>$username, 'email'=>$email, 'password'=>$password, 'isAdmin'=>$isAdmin, 'failed'=>false);
     echo json_encode($jsonArray);
 }
