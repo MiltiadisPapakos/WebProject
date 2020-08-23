@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Site Name</title>
-    <link rel="stylesheet" type="text/css" href="signup.css">
+    <link rel="stylesheet" type="text/css" href="../signupLogin.css">
+    <script src="../utils.js"></script>
     <script src="signup.js" defer></script>
-    <script src="../libraries/blueimp-md5/js/md5.min.js"></script>
+    <script src="../../libraries/blueimp-md5/js/md5.min.js"></script>
 </head>
 
 <body>
 
     <h1>Welcome to "Site Name"</h1>
-    <img src="orange.jpg" alt="Orange Square">
+    <img src="../orange.jpg" alt="Orange Square">
 
-    <br><br><br>
+    <br><br>
 
     <label>
-        User Name:
+        Username:
         <br>
         <input type="text" id="su_username_input">
     </label>
@@ -49,9 +50,15 @@
 
     <button id="su_button_ok">Ok</button>
 
-    <br><br><br>
+    <br><br>
 
     <p>
+        Already have an account? <a href="../login/login.html">Log in</a> instead.
+    </p>
+
+    <br><br>
+
+    <p class="error">
         <span id="error_message_span"></span>
     </p>
 

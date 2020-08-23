@@ -1,10 +1,12 @@
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
 function passwordIsCorrect(password, verificationPassword){
     if (password !== verificationPassword){
         errorMessageSpan.textContent = "The password and the verification password don't match."
         return false
     }
     if (password.length < 8){
-        errorMessageSpan.textContentrt = "The password must have at least 8 characters."
+        errorMessageSpan.textContent = "The password must have at least 8 characters."
         return false
     }
     if (password.toUpperCase() === password){
@@ -27,6 +29,30 @@ function passwordIsCorrect(password, verificationPassword){
     return true
 }
 
+function usernameIsCorrect(username){
+    if (username.length === 0){
+        errorMessageSpan.textContent = "Please enter a username."
+        return false
+    }
+    if (/@/.test(username)){
+        errorMessageSpan.textContent = "The username must not contain '@'."
+        return false
+    }
+    return true
+}
+
+function emailIsCorrect(email){
+    if (email.length === 0){
+        errorMessageSpan.textContent = "Please enter an email address."
+        return false
+    }
+    if (!EMAIL_REGEX.test(email)){
+        errorMessageSpan.textContent = "Please enter a valid email address."
+        return false
+    }
+    return true
+}
+
 function addUser(uid, username, email, passwordHash, isAdmin){
     let credentials = {
         uid: uid,
@@ -36,25 +62,31 @@ function addUser(uid, username, email, passwordHash, isAdmin){
         isAdmin: isAdmin.toString()
     }
 
-    fetch("http://localhost:63342/WebProject/signup/signup.php", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(credentials)
-    })
-        .then(res => {
+    let url = "http://localhost:63342/WebProject/signupLogin/signup/signup.php"
+    simplePhpPostRequest(url, credentials,
+        _ => {
             alert("Sign up was successful.")
-        })
-        .catch(reason => {
-            console.log(reason)
+            usernameInput.value = ""
+            emailInput.value = ""
+            passwordInput.value = ""
+            verifyPasswordInput.value = ""
+        },
+        _ => {
             alert("Sign up failed. Please try again.")
         })
+
 }
 
 function onClick(){
+    let username = usernameInput.value
     let password = passwordInput.value
-    if(passwordIsCorrect(password, verifyPasswordInput.value)){
-        let username = usernameInput.value
-        let email = emailInput.value
+    let email = emailInput.value
+
+    if(
+        passwordIsCorrect(password, verifyPasswordInput.value) &&
+        emailIsCorrect(email) &&
+        usernameIsCorrect(username)
+    ){
         let md5Password = md5(password)
         let uid = md5(email, password)
         let isAdmin = false
