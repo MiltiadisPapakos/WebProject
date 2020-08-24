@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
     <script src="../utils.js" defer></script>
-    <script src="uploadData.js" defer></script>
     <script src="createMap.js" defer></script>
+    <script src="uploadData.js" defer></script>
 </head>
 
 <body>
@@ -24,6 +24,13 @@
         <div class="twoColumn" style="text-align: center">
             <br><br><br>
             <input id="upload_file_input" type="file" accept=".json">
+
+            <br><br><br><br><br><br>
+            <button id="upload_undo_button" style="position:relative; left: -9em">Undo</button>
+
+            <br><br><br>
+            <button id="upload_reset_button" style="position:relative; left: -9em">Reset</button>
+
         </div>
 
     </div>
@@ -31,8 +38,16 @@
 
     <div class="oneColumn">
         <br>
-        <p class="details">Some detailed instructions about what to do.</p>
-        <br>
+        <p class="details" style="padding-right: 20px; padding-left: 20px; text-align: left">
+            In order to add your data click the button "Browse" and select a .json file downloaded from google maps.
+            Then click the button "Upload" to upload your data.
+            All data which are outside of the city of Patras will be automatically removed.
+            In addition if you want all the data from a specific area to be removed create a rectangle in this area.
+            <br>
+            To create a rectangle: click on the map, move the mouse on the map, click again when you have created the rectangle you want.
+            You can create more than one rectangles. With the button "Undo" you can erase the last rectangle you created.
+            With the button "Reset" you can erase all rectangles.
+        </p>
         <button id="map_upload_button" class="leftButton">Upload!</button>
     </div>
 
