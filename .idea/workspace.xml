@@ -13,12 +13,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Added a feature which enables a user to upload location data.">
+    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Added the ability to reject locations.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userUploadData/createMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/createMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userUploadData/createMap.php" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/uploadData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userUploadData/uploadData.html" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/uploadData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userUploadData/uploadData.js" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/uploadData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,8 @@
       <workItem from="1598129734578" duration="9568000" />
       <workItem from="1598170204301" duration="10001000" />
       <workItem from="1598187688279" duration="24011000" />
-      <workItem from="1598275169570" duration="13717000" />
+      <workItem from="1598275169570" duration="14778000" />
+      <workItem from="1598306874470" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1598171427032</created>
@@ -131,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598220975503</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added the ability to reject locations.">
+      <created>1598305782643</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1598305782643</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +164,8 @@
     <MESSAGE value="Fixed bug." />
     <MESSAGE value="Added first and last name columns to DB." />
     <MESSAGE value="Added a feature which enables a user to upload location data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a feature which enables a user to upload location data." />
+    <MESSAGE value="Added the ability to reject locations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to reject locations." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1024" y="27" width="694" height="741" key="#PHP" timestamp="1598138004348">
@@ -179,22 +188,22 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1373" y="74" width="657" height="654" key="Github.UntrackedFilesDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171983649" />
-    <state width="1035" height="277" key="GridCell.Tab.0.bottom" timestamp="1598305060128">
+    <state width="1035" height="277" key="GridCell.Tab.0.bottom" timestamp="1598306359301">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.bottom/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598305060128" />
-    <state width="1035" height="277" key="GridCell.Tab.0.center" timestamp="1598305060128">
+    <state width="1035" height="277" key="GridCell.Tab.0.bottom/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359301" />
+    <state width="1035" height="277" key="GridCell.Tab.0.center" timestamp="1598306359301">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.center/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598305060128" />
-    <state width="1035" height="277" key="GridCell.Tab.0.left" timestamp="1598305060128">
+    <state width="1035" height="277" key="GridCell.Tab.0.center/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359301" />
+    <state width="1035" height="277" key="GridCell.Tab.0.left" timestamp="1598306359300">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.left/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598305060128" />
-    <state width="1035" height="277" key="GridCell.Tab.0.right" timestamp="1598305060128">
+    <state width="1035" height="277" key="GridCell.Tab.0.left/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359300" />
+    <state width="1035" height="277" key="GridCell.Tab.0.right" timestamp="1598306359301">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.right/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598305060128" />
+    <state width="1035" height="277" key="GridCell.Tab.0.right/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359301" />
     <state x="1503" y="322" width="397" height="158" key="NewPhpFileDialog" timestamp="1598219952905">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
@@ -203,10 +212,10 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1196" y="31" width="1022" height="737" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171927484" />
-    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598220976901">
+    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598305784434">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598220976901" />
+    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598305784434" />
     <state x="1490" y="311" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598139406450">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>

@@ -10,6 +10,7 @@ simplePhpPostRequest(
                 if (success){
                     let isAdmin = res['isAdmin']
                     console.log(res['success'])
+                    console.log(res['isAdmin'])
                     if(isAdmin === '0'){
                         window.location.replace("http://localhost:63342/WebProject/userMain/userMain.html")
                     }

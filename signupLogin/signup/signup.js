@@ -85,7 +85,7 @@ function addUser(uid, username, firstName, lastName, email, passwordHash, isAdmi
                 .then(res => {
                     let success = res['success']
                     if (success){
-                        window.location.replace("http://localhost:63342/WebProject/userMain/userMain.html")
+                        window.location.replace("http://localhost:63342/WebProject/index.html")
                         usernameInput.value = ""
                         emailInput.value = ""
                         passwordInput.value = ""
