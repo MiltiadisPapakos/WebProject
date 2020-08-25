@@ -29,8 +29,8 @@ function connectToDb(){
 
 /**_____________________________________________________________________________________________*/
 /**
- * DB details (those are the details information.
- * When you create your own localhost DB you need to use exactly the same names for everything to work correctly.
+ * DB details (those are the detailed information for the DB used).
+ * When you create your own DB at your localhost you need to use exactly the same names for everything to work correctly.
  * DB name: web_project
  * Table 1:
  *   - name: users

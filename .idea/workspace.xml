@@ -13,10 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Fixed a bug in sign up/log in flow.">
+    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Changes for more users to be able to work with localhost DBs easily.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signupLogin/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signupLogin/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="settings.json.schema" />
   </component>
@@ -88,7 +86,7 @@
       <workItem from="1598187688279" duration="24011000" />
       <workItem from="1598275169570" duration="14778000" />
       <workItem from="1598306874470" duration="2015000" />
-      <workItem from="1598340327819" duration="4194000" />
+      <workItem from="1598340327819" duration="4999000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1598171427032</created>
@@ -146,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598307227100</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changes for more users to be able to work with localhost DBs easily.">
+      <created>1598344794042</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1598344794042</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +178,8 @@
     <MESSAGE value="Added a feature which enables a user to upload location data." />
     <MESSAGE value="Added the ability to reject locations." />
     <MESSAGE value="Fixed a bug in sign up/log in flow." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug in sign up/log in flow." />
+    <MESSAGE value="Changes for more users to be able to work with localhost DBs easily." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes for more users to be able to work with localhost DBs easily." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1024" y="27" width="694" height="741" key="#PHP" timestamp="1598138004348">
@@ -233,10 +239,11 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1196" y="31" width="1022" height="737" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171927484" />
-    <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598307229208">
-      <screen x="1024" y="0" width="1366" height="768" />
+    <state x="1024" y="155" width="1366" height="517" key="Vcs.Push.Dialog.v2" timestamp="1598344795686">
+      <screen x="0" y="27" width="2390" height="741" />
     </state>
     <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598307229208" />
+    <state x="1024" y="155" width="1366" height="517" key="Vcs.Push.Dialog.v2/0.27.2390.741@0.27.2390.741" timestamp="1598344795686" />
     <state x="1490" y="311" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598139406450">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
