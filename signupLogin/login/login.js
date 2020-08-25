@@ -9,7 +9,6 @@ function findUser(userInput, passwordHash, usernameUsed){
     let url = "http://localhost:63342/WebProject/signupLogin/login/login.php"
     simplePhpPostRequest(url, credentials,
         res => {
-            console.log(res)
             res.json()
                 .then(res => {
                     if (res['failed'] === false) {
@@ -19,7 +18,6 @@ function findUser(userInput, passwordHash, usernameUsed){
                         console.log(res['lastName'])
                         console.log(res['email'])
                         console.log(res['isAdmin'])
-                        // alert('b')
                         window.location.replace("http://localhost:63342/WebProject/index.html")
                     }
                     else{
@@ -53,4 +51,4 @@ let passwordInput = document.querySelector("#li_password_input")
 let logInButton = document.querySelector("#log_in_button")
 let logInErrorSpan = document.querySelector("#li_error_span")
 
-logInButton.addEventListener("click", onClick)
+logInButton.addEventListener('click', onClick)
