@@ -11,19 +11,12 @@ p{font-size: small}
     width: 49%;
     float:left;
     left: 2em;
-    /*height: 80%;*/
 }
 
 .oneColumn{
     width: 100%;
     float: right;
     text-align: center;
-    /*position: relative;*/
-    /*top: 3em;*/
-    /*left: 30em;*/
-    /*width: 500px;*/
-    /*height: 30px;*/
-    /*align-content: center;*/
 }
 
 .leftButton{

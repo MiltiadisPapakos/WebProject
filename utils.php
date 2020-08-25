@@ -39,9 +39,9 @@ function connectToDb(){
  *   - column types: uid, password --> varchar(35); username --> varchar(25); first_name, last_name --> varchar(30); email --> varchar(50); is_admin --> tinyint(1);
  * Table 2:
  *   - name: locations
- *   - columns: uid, loc_timestamp, latitude, longitude, activity
+ *   - columns: uid, loc_timestamp, latitude, longitude, activity, year, month, day, hour
  *   - primary key: uid, loc_timestamp
  *   - foreign key: uid (on delete: cascade, on update: cascade)
- *   - column types: uid --> varchar(35); loc_timestamp, latitude, longitude --> bigint(20); activity --> varchar(25);
+ *   - column types: uid --> varchar(35); loc_timestamp, latitude, longitude --> bigint(20); activity --> varchar(25); year, monyh, day, hour --> int(11)
  *   - default values: activity --> "UNKNOWN"
  */

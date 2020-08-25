@@ -1,0 +1,20 @@
+select {margin: 10px;}
+label {
+    position: relative;
+    left: 4em
+}
+button {
+    font-size: large;
+    width: 300px;
+    height: 40px;
+    position: relative;
+    left: 11em;
+}
+
+#admin_map_id {height: 450px}
+
+.twoColumn{
+    width: 49%;
+    float:left;
+    left: 2em;
+}

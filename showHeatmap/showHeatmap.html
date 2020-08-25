@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Site Name</title>
+    <link rel="stylesheet" type="text/css" href="showHeatmap.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="createMap.js" defer></script>
+    <script src="createSelectors.js" defer></script>
+    <script src="../utils.js"></script>
+    <script src="dateUtils.js"></script>
+    <script src="showHeatmap.js" defer></script>
+</head>
+
+<body>
+
+    <h3>Heatmap Data</h3>
+
+    <div id="admin_map_id" class="twoColumn"></div>
+
+    <div>
+        <label>
+            Years:
+            <br>
+            <select name="starting_year" id="starting_year_selector">
+            </select>
+        </label>
+
+        <label>
+            <select name="ending_year" id="ending_year_selector">
+            </select>
+        </label>
+
+        <label style="position:relative; padding-left: 2em">
+            All
+            <input type="checkbox" id="year_all_checkbox">
+        </label>
+
+        <br><br>
+
+        <label>
+            Months:
+            <br>
+            <select name="starting_month" id="starting_month_selector">
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+            </select>
+        </label>
+
+        <label>
+            <select name="ending_month" id="ending_month_selector">
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+            </select>
+        </label>
+
+        <label style="position:relative; padding-left: 2em">
+            All
+            <input type="checkbox" id="month_all_checkbox">
+        </label>
+
+        <br><br>
+
+        <label>
+            Days:
+            <br>
+            <select name="starting_day" id="starting_day_selector">
+                <option value="mon">Monday</option>
+                <option value="tue">Tuesday</option>
+                <option value="wed">Wednesday</option>
+                <option value="thu">Thursday</option>
+                <option value="fri">Friday</option>
+                <option value="sat">Saturday</option>
+                <option value="sun">Sunday</option>
+            </select>
+        </label>
+
+        <label>
+            <select name="ending_day" id="ending_day_selector">
+                <option value="mon">Monday</option>
+                <option value="tue">Tuesday</option>
+                <option value="wed">Wednesday</option>
+                <option value="thu">Thursday</option>
+                <option value="fri">Friday</option>
+                <option value="sat">Saturday</option>
+                <option value="sun">Sunday</option>
+            </select>
+        </label>
+
+        <label style="position:relative; padding-left: 2em">
+            All
+            <input type="checkbox" id="day_all_checkbox">
+        </label>
+
+        <br><br>
+
+        <label>
+            Hours:
+            <br>
+            <select name="starting_hour" id="starting_hour_selector">
+            </select>
+        </label>
+
+        <label>
+            <select name="ending_hour" id="ending_hour_selector">
+            </select>
+        </label>
+
+        <label style="position:relative; padding-left: 2em">
+            All
+            <input type="checkbox" id="hour_all_checkbox">
+        </label>
+
+        <br><br>
+
+        <label>
+            Activity:
+            <br>
+            <select name="activity" id="activity_selector" multiple>
+            </select>
+        </label>
+
+    </div>
+
+
+    <button id="heatmap_show_button">Show Data</button>
+
+
+</body>
+
+</html>

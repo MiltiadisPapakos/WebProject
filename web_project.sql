@@ -13,7 +13,11 @@ CREATE TABLE `locations` (
   `loc_timestamp` bigint(20) NOT NULL,
   `latitude` bigint(20) NOT NULL,
   `longitude` bigint(20) NOT NULL,
-  `activity` varchar(25) NOT NULL DEFAULT 'UNKNOWN'
+  `activity` varchar(25) NOT NULL DEFAULT 'UNKNOWN',
+  `year` int(11) NOT NULL,
+  `month` int(11) NOT NULL,
+  `day` int(11) NOT NULL,
+  `hour` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -32,3 +36,27 @@ CREATE TABLE `users` (
   `is_admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- Indexes for table `locations`
+--
+ALTER TABLE `locations`
+    ADD PRIMARY KEY (`uid`,`loc_timestamp`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+    ADD PRIMARY KEY (`uid`),
+    ADD UNIQUE KEY `username` (`username`,`email`);
+
+--
+-- Indexes for table `locations`
+--
+ALTER TABLE `locations`
+    ADD PRIMARY KEY (`uid`,`loc_timestamp`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+    ADD PRIMARY KEY (`uid`),
+    ADD UNIQUE KEY `username` (`username`,`email`);

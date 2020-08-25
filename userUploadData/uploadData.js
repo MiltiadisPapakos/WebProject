@@ -59,7 +59,10 @@ function getJsonData(event){
                 activities.forEach(activity => {
                     let timestamp = activity['timestampMs']
                     let types = activity['activity']
-                    let bestType = types[0]['type'] === 'IN_VEHICLE' ? types[1]['type'] : types[0]['type']
+                    let bestType = types[0]['type']
+                    if (types.length > 1) {
+                        bestType = types[0]['type'] === 'IN_VEHICLE' ? types[1]['type'] : types[0]['type']
+                    }
 
                     if (isAllowed(latitude, longitude)) {
                         formattedData.push({
