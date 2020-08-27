@@ -7,7 +7,6 @@ simplePhpPostRequest(
         res.json()
             .then(res => {
                 let success = res['success']
-                alert(res['isAdmin'])
                 if (success){
                     let isAdmin = res['isAdmin']
                     if(isAdmin === '0'){

@@ -13,22 +13,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/showHeatmap/activites.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/createMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/createSelectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/dateUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/heatmapNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/showHeatmap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/showHeatmap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/showHeatmap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showHeatmap/showHeatmap.php" afterDir="false" />
+    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Changes in DB.&#10;Added a UI for the admin to be able to look a data heatmap.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminMain/adminMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminMain/adminMain.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signupLogin/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userUploadData/uploadData.css" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/uploadData.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/sqlUtils.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userUploadData/uploadData.js" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/uploadData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userUploadData/uploadData.php" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/uploadData.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +93,8 @@
       <workItem from="1598306874470" duration="2015000" />
       <workItem from="1598340327819" duration="6101000" />
       <workItem from="1598374077068" duration="2046000" />
-      <workItem from="1598376148498" duration="12431000" />
+      <workItem from="1598376148498" duration="13341000" />
+      <workItem from="1598518930951" duration="2359000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1598171427032</created>
@@ -174,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598345586452</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changes in DB.&#10;Added a UI for the admin to be able to look a data heatmap.">
+      <created>1598395710265</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598395710265</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +202,8 @@
     <MESSAGE value="Fixed a bug in sign up/log in flow." />
     <MESSAGE value="Changes for more users to be able to work with localhost DBs easily." />
     <MESSAGE value="Added .sql DB file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .sql DB file." />
+    <MESSAGE value="Changes in DB.&#10;Added a UI for the admin to be able to look a data heatmap." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in DB.&#10;Added a UI for the admin to be able to look a data heatmap." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1024" y="27" width="694" height="741" key="#PHP" timestamp="1598138004348">
@@ -218,6 +218,10 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1302" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598137787818" />
+    <state x="1124" y="127" width="1166" height="541" key="DiffContextDialog" timestamp="1598520611956">
+      <screen x="1024" y="0" width="1366" height="768" />
+    </state>
+    <state x="1124" y="127" width="1166" height="541" key="DiffContextDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598520611956" />
     <state x="1557" y="297" width="492" height="342" key="Github.ShareDialog" timestamp="1598171970304">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
@@ -226,38 +230,38 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1373" y="74" width="657" height="654" key="Github.UntrackedFilesDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171983649" />
-    <state width="1035" height="225" key="GridCell.Tab.0.bottom" timestamp="1598383367900">
+    <state width="1035" height="225" key="GridCell.Tab.0.bottom" timestamp="1598521103584">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.bottom/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359301" />
+    <state width="1035" height="225" key="GridCell.Tab.0.bottom/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598521103584" />
     <state width="1035" height="277" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1598343201048" />
     <state width="1035" height="277" key="GridCell.Tab.0.bottom/0.27.2390.741@0.27.2390.741" timestamp="1598344017080" />
     <state width="761" height="225" key="GridCell.Tab.0.bottom/1024.0.1366.768/0.27.1024.741@0.27.1024.741" timestamp="1598383215412" />
-    <state width="1035" height="225" key="GridCell.Tab.0.bottom/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598383367900" />
-    <state width="1035" height="225" key="GridCell.Tab.0.center" timestamp="1598383367900">
+    <state width="1035" height="225" key="GridCell.Tab.0.bottom/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598395488236" />
+    <state width="1035" height="225" key="GridCell.Tab.0.center" timestamp="1598521103584">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.center/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359301" />
+    <state width="1035" height="225" key="GridCell.Tab.0.center/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598521103584" />
     <state width="1035" height="277" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1598343201047" />
     <state width="1035" height="277" key="GridCell.Tab.0.center/0.27.2390.741@0.27.2390.741" timestamp="1598344017079" />
     <state width="761" height="225" key="GridCell.Tab.0.center/1024.0.1366.768/0.27.1024.741@0.27.1024.741" timestamp="1598383215411" />
-    <state width="1035" height="225" key="GridCell.Tab.0.center/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598383367900" />
-    <state width="1035" height="225" key="GridCell.Tab.0.left" timestamp="1598383367900">
+    <state width="1035" height="225" key="GridCell.Tab.0.center/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598395488236" />
+    <state width="1035" height="225" key="GridCell.Tab.0.left" timestamp="1598521103584">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.left/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359300" />
+    <state width="1035" height="225" key="GridCell.Tab.0.left/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598521103584" />
     <state width="1035" height="277" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1598343201047" />
     <state width="1035" height="277" key="GridCell.Tab.0.left/0.27.2390.741@0.27.2390.741" timestamp="1598344017079" />
     <state width="761" height="225" key="GridCell.Tab.0.left/1024.0.1366.768/0.27.1024.741@0.27.1024.741" timestamp="1598383215411" />
-    <state width="1035" height="225" key="GridCell.Tab.0.left/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598383367900" />
-    <state width="1035" height="225" key="GridCell.Tab.0.right" timestamp="1598383367900">
+    <state width="1035" height="225" key="GridCell.Tab.0.left/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598395488236" />
+    <state width="1035" height="225" key="GridCell.Tab.0.right" timestamp="1598521103584">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state width="1035" height="277" key="GridCell.Tab.0.right/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598306359301" />
+    <state width="1035" height="225" key="GridCell.Tab.0.right/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598521103584" />
     <state width="1035" height="277" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1598343201048" />
     <state width="1035" height="277" key="GridCell.Tab.0.right/0.27.2390.741@0.27.2390.741" timestamp="1598344017080" />
     <state width="761" height="225" key="GridCell.Tab.0.right/1024.0.1366.768/0.27.1024.741@0.27.1024.741" timestamp="1598383215411" />
-    <state width="1035" height="225" key="GridCell.Tab.0.right/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598383367900" />
+    <state width="1035" height="225" key="GridCell.Tab.0.right/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598395488236" />
     <state x="1414" y="113" width="575" height="575" key="NewPhpClassDialog" timestamp="1598375147303">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
@@ -276,11 +280,12 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1196" y="31" width="1022" height="737" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598171927484" />
-    <state x="1024" y="155" width="1366" height="517" key="Vcs.Push.Dialog.v2" timestamp="1598345588585">
-      <screen x="0" y="27" width="2390" height="741" />
+    <state x="1609" y="133" width="1366" height="517" key="Vcs.Push.Dialog.v2" timestamp="1598395712206">
+      <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598307229208" />
     <state x="1024" y="155" width="1366" height="517" key="Vcs.Push.Dialog.v2/0.27.2390.741@0.27.2390.741" timestamp="1598345588585" />
+    <state x="1609" y="133" key="Vcs.Push.Dialog.v2/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598395712206" />
     <state x="1490" y="311" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598139406450">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>

@@ -115,4 +115,3 @@ let mapUploadButton = document.querySelector("#map_upload_button")
 uploadFileInput.addEventListener("change", onFileUploaded)
 mapUploadButton.addEventListener("click", uploadOnDb)
 
-
