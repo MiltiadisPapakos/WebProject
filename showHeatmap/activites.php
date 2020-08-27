@@ -12,7 +12,6 @@ $query = "SELECT DISTINCT activity FROM locations";
 $result = $connection->query($query);
 
 $activities = array();
-$i = 0;
 
 while ($row = $result->fetch_array()){
     $activities[] = $row["activity"];

@@ -2,7 +2,6 @@
 include "../utils.php";
 include "../sqlUtils.php";
 
-
 $connection = connectToDb();
 
 if(mysqli_connect_errno()){

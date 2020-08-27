@@ -28,15 +28,26 @@ let showButton = document.querySelector("#heatmap_show_button")
 
 
 
-showButton.addEventListener('click', event => {
-    startingYear = startingYearSelector.value
-    endingYear = endingYearSelector.value
-    startingMonth = startingMonthSelector.value
-    endingMonth = endingMonthSelector.value
-    startingDay = startingDaySelector.value
-    endingDay = endingDaySelector.value
-    startingHour = startingHourSelector.value
-    endingHour = endingHourSelector.value
+showButton.addEventListener('click', onClick)
+
+
+function onClick(event){
+    if (!allYearCheck.checked) {
+        startingYear = startingYearSelector.value
+        endingYear = endingYearSelector.value
+    }
+    if (!allMonthCheck.checked) {
+        startingMonth = startingMonthSelector.value
+        endingMonth = endingMonthSelector.value
+    }
+    if (!allDayCheck.checked) {
+        startingDay = startingDaySelector.value
+        endingDay = endingDaySelector.value
+    }
+    if (!allHourCheck.checked) {
+        startingHour = startingHourSelector.value
+        endingHour = endingHourSelector.value
+    }
 
 
     activities = []
@@ -45,7 +56,11 @@ showButton.addEventListener('click', event => {
             activities.push(option.value)
         }
     }
-    console.log(activities)
+    if (activities.length === 0){
+        alert("Please select at least one activity.")
+        return
+    }
+    // console.log(activities)
 
 
     if (
@@ -58,9 +73,34 @@ showButton.addEventListener('click', event => {
         return
     }
 
-    // here i can work with all the data i need
-})
+    let url = "http://localhost:63342/WebProject/showHeatmap/showHeatmap.php"
+    let credentials = {
+        startingYear: startingYear,
+        endingYear: endingYear,
+        startingMonth: monthToNum(startingMonth),
+        endingMonth: monthToNum(endingMonth),
+        startingDay: dayToNum(startingDay),
+        endingDay: dayToNum(endingDay),
+        startingHour: startingHour,
+        endingHour: endingHour,
+        activities: activities
+    }
 
+    simplePhpPostRequest(
+        url,
+        credentials,
+        res => {
+            res.json()
+                .then(res => {
+                    alert("PHP call was successful.")
+                    addHeatmapLayer(res);
+                })
+        },
+        reason => {
+
+        }
+    )
+}
 
 
 
