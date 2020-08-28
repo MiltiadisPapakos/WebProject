@@ -3,6 +3,13 @@ let file = null
 const CITY_X = 38.2304620/0.09
 const CITY_Y = 21.7531500/0.12
 
+function getValueFromJson(json, itemKey){
+    if (json.hasOwnProperty(itemKey)){
+        return json[itemKey]
+    }
+    return -1
+}
+
 function isInSquare(x, y, x1, y1, x2, y2){
     let smallX = x1 < x2 ? x1 : x2
     let bigX = x1 >= x2 ? x1 : x2
@@ -53,6 +60,12 @@ function getJsonData(event){
         locations.forEach(item => {
             let latitude = item['latitudeE7']
             let longitude = item['longitudeE7']
+            let locTimestamp = item['timestampMs']
+            let accuracy = item['accuracy']
+            let velocity = getValueFromJson(item, 'velocity')
+            let altitude = getValueFromJson(item, 'altitude')
+            let verticalAccuracy = getValueFromJson(item, 'verticalAccuracy')
+
 
             if (item.hasOwnProperty('activity')) {
                 let activities = item['activity']
@@ -60,23 +73,29 @@ function getJsonData(event){
                     let timestamp = activity['timestampMs']
                     let types = activity['activity']
                     let bestType = types[0]['type']
-                    if (types.length > 1) {
-                        bestType = types[0]['type'] === 'IN_VEHICLE' ? types[1]['type'] : types[0]['type']
-                    }
+                    let confidence = getValueFromJson(activity, 'confidence')
+                    let heading = getValueFromJson(activity, 'heading')
 
                     if (isAllowed(latitude, longitude)) {
                         formattedData.push({
                             uid: uid,
                             latitude: latitude,
                             longitude: longitude,
-                            timestamp: timestamp,
-                            activity: bestType
+                            actTimestamp: timestamp,
+                            activity: bestType,
+                            locTimestamp: locTimestamp,
+                            accuracy: accuracy,
+                            velocity: velocity,
+                            altitude: altitude,
+                            verticalAccuracy: verticalAccuracy,
+                            confidence: confidence,
+                            heading: heading
                         })
                     }
                 })
             }
             else{
-                let timestamp = item['timestampMs']
+                // let timestamp = item['timestampMs']
                 let type = 'UNKNOWN'
 
                 if (isAllowed(latitude, longitude)) {
@@ -84,8 +103,15 @@ function getJsonData(event){
                         uid: uid,
                         latitude: latitude,
                         longitude: longitude,
-                        timestamp: timestamp,
-                        activity: type
+                        actTimestamp: -1,
+                        activity: type,
+                        locTimestamp: locTimestamp,
+                        accuracy: accuracy,
+                        velocity: velocity,
+                        altitude: altitude,
+                        verticalAccuracy: verticalAccuracy,
+                        confidence: -1,
+                        heading: -1
                     })
                 }
             }

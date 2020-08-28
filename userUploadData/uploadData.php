@@ -11,20 +11,46 @@ if(mysqli_connect_errno()){
 $json = file_get_contents('php://input');
 $credentials = json_decode($json, true);
 
-$insertQuery = "INSERT INTO locations(uid, loc_timestamp, latitude, longitude, activity, year, month, day, hour) VALUES";
+$insertQuery = "INSERT INTO locations(uid, key_timestamp, latitude, longitude, activity, heading, confidence, ";
+$insertQuery = $insertQuery . "loc_timestamp, act_timestamp, vertical_accuracy, velocity, accuracy, altitude, ";
+$insertQuery = $insertQuery . "year, month, day, hour) VALUES";
 
 for ($i=0; $i<sizeof($credentials); $i=$i+1){
     $item = $credentials[$i];
 
     $uid = $item['uid'];
-    $timestamp = $item['timestamp'];
+    $actTimestamp = $item['actTimestamp'];
     $latitude = $item['latitude'];
     $longitude = $item['longitude'];
     $activity = $item['activity'];
+    $locTimestamp = $item['locTimestamp'];
+    $accuracy = $item['accuracy'];
+    $velocity = $item['velocity'];
+    $altitude = $item['altitude'];
+    $verticalAccuracy = $item['verticalAccuracy'];
+    $confidence = $item['confidence'];
+    $heading = $item['heading'];
 
-    $dateInfo = getDateInfo((int) (intval($timestamp)/1000));
+    $keyTimestamp = $actTimestamp != -1 ? $actTimestamp : $locTimestamp;
 
-    $insertQuery = $insertQuery.appendLocationInsertValues($uid, $timestamp, $latitude, $longitude, $activity, $dateInfo);
+    $dateInfo = getDateInfo((int) (intval($keyTimestamp)/1000));
+
+    $insertQuery = $insertQuery.appendLocationInsertValues(
+        $uid,
+        $keyTimestamp,
+        $latitude,
+        $longitude,
+        $activity,
+        $heading,
+        $confidence,
+        $locTimestamp,
+        $actTimestamp,
+        $verticalAccuracy,
+        $velocity,
+        $accuracy,
+        $altitude,
+        $dateInfo);
+
     if ($i != sizeof($credentials)-1){
         $insertQuery = $insertQuery.",";
     }

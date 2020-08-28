@@ -92,7 +92,6 @@ function onClick(event){
         res => {
             res.json()
                 .then(res => {
-                    alert("PHP call was successful.")
                     addHeatmapLayer(res);
                 })
         },
