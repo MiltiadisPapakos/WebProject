@@ -31,7 +31,17 @@ let showButton = document.querySelector("#heatmap_show_button")
 showButton.addEventListener('click', onClick)
 
 
-function onClick(event){
+function calculateParameters(){
+    let startingYear = 2000
+    let endingYear = 2020
+    let startingMonth = 'jan'
+    let endingMonth = 'dec'
+    let startingDay = 'mon'
+    let endingDay = 'sun'
+    let startingHour = 0
+    let endingHour = 24
+    let activities = []
+
     if (!allYearCheck.checked) {
         startingYear = startingYearSelector.value
         endingYear = endingYearSelector.value
@@ -58,10 +68,8 @@ function onClick(event){
     }
     if (activities.length === 0){
         alert("Please select at least one activity.")
-        return
+        return null
     }
-    // console.log(activities)
-
 
     if (
         !(compareYears(startingYear, endingYear) || allYearCheck.checked) ||
@@ -70,11 +78,11 @@ function onClick(event){
         !(compareHours(startingHour, endingHour) || allHourCheck.checked)
     ){
         alert("There was an error in the parameters you entered, please try again.")
-        return
+        return null
     }
 
-    let url = "http://localhost:63342/WebProject/showHeatmap/showHeatmap.php"
-    let credentials = {
+
+    return {
         startingYear: startingYear,
         endingYear: endingYear,
         startingMonth: monthToNum(startingMonth),
@@ -84,6 +92,15 @@ function onClick(event){
         startingHour: startingHour,
         endingHour: endingHour,
         activities: activities
+    }
+}
+
+function onClick(event){
+    let url = "http://localhost:63342/WebProject/showHeatmap/showHeatmap.php"
+
+    let credentials = calculateParameters()
+    if (credentials == null){
+        return
     }
 
     simplePhpPostRequest(

@@ -5,10 +5,11 @@ label {
 }
 button {
     font-size: large;
-    width: 300px;
+    width: 180px;
     height: 40px;
     position: relative;
-    left: 11em;
+    left: 5em;
+    margin-left: 55px;
 }
 
 #admin_map_id {height: 450px}

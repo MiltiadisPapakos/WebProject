@@ -16,6 +16,9 @@
     <script src="dateUtils.js"></script>
     <script src="createMap.js" defer></script>
     <script src="showHeatmap.js" defer></script>
+
+    <script src="../exportData/dataTypeUtils.js"></script>
+    <script src="../exportData/exportData.js" defer></script>
 </head>
 
 <body>
@@ -151,6 +154,15 @@
 
     <button id="heatmap_show_button">Show Data</button>
 
+    <button id="export_data_button">Export Data</button>
+
+    <label style="margin-left: 20px">
+        <select name="file_type" id="file_type_select">
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+        </select>
+    </label>
 
 </body>
 
