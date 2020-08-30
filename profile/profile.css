@@ -1,0 +1,38 @@
+label{
+    margin: 10px;
+}
+
+button{
+    width: 180px;
+}
+
+h3{
+    position: relative;
+    left: 5em;
+}
+
+label{
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.leftCenter {
+/*position: relative;*/
+/*left: 10em;*/
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    float: left;
+}
+
+
+.right {
+    position: relative;
+    right: 13em;
+    top: 10em;
+    width: 30%;
+}

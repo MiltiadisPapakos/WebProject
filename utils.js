@@ -26,9 +26,10 @@ function phpRequest(url, method, headers, credentials, onSuccess, onFailure){
         })
 }
 
-function getUserData(url, onSuccess) {
+function getUserData(onSuccess) {
+    let indexPhpUrl = 'http://localhost:63342/WebProject/index.php'
     simplePhpPostRequest(
-        url,
+        indexPhpUrl,
         {},
         res => {
             res.json()

@@ -49,10 +49,9 @@ function uploadOnDb(event){
 }
 
 function getJsonData(event){
-    let indexPhpUrl = 'http://localhost:63342/WebProject/index.php'
     let locations = JSON.parse(event.target.result)['locations']
 
-    getUserData(indexPhpUrl, res => {
+    getUserData(res => {
         let formattedData = []
 
         let uid = res['uid']

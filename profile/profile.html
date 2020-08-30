@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Site Name</title>
+
+    <link rel="stylesheet" type="text/css" href="profile.css">
+
+    <script src="../libraries/blueimp-md5/js/md5.min.js"></script>
+    <script src="../utils.js"></script>
+    <script src="profile.js" defer></script>
+</head>
+
+<body>
+
+    <h3>Edit Your Profile</h3>
+
+    <br>
+
+    <label class="leftCenter">
+        <label>
+            &nbsp&nbsp&nbspUsername:
+            <br>
+            <input type="text" id="profile_username_input" disabled>
+        </label>
+
+        <br><br>
+
+        <label>
+            &nbsp&nbsp&nbspFirst Name:
+            <br>
+            <input type="text" id="profile_first_name_input">
+        </label>
+
+        <br><br>
+
+        <label>
+            &nbsp&nbsp&nbspLast Name:
+            <br>
+            <input type="text" id="profile_last_name_input">
+        </label>
+
+        <br><br>
+
+        <label>
+            &nbsp&nbsp&nbspEmail:
+            <br>
+            <input type="email" id="profile_email_input" disabled>
+        </label>
+
+        <br><br>
+
+        <label>
+            <button id="change_pw_button">Change Password</button>
+        </label>
+
+        <br>
+
+        <label>
+            <button id="profile_update_button">Update</button>
+        </label>
+    </label>
+
+
+    <label id="profile_passwords_label" class="right" style="visibility: hidden">
+
+        <label>
+            Old Password:
+            <br>
+            <input type="password" id="profile_old_pw_input">
+        </label>
+
+        <br><br>
+
+        <label>
+            &nbsp&nbspNew Password:
+            <br>
+            <input type="password" id="profile_new_pw_input">
+        </label>
+
+        <br><br>
+
+        <label>
+            &nbsp&nbspRepeat New Password:
+            <br>
+            <input type="password" id="profile_repeat_new_pw_input">
+        </label>
+
+        <br><br>
+
+        <button
+                id="profile_change_pw_ok_button"
+                style="width: 75px; margin-left:11em">
+            Ok
+        </button>
+
+    </label>
+
+
+    <p
+            id="profile_error_p"
+            class="leftCenter"
+            style="font-size: small; color: dimgrey"
+    >
+    </p>
+
+</body>
+
+</html>

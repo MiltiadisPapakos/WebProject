@@ -3,6 +3,7 @@ session_start();
 
 if(isset($_SESSION['uid'])) {
     $uid = $_SESSION['uid'];
+    $username = $_SESSION['username'];
     $firstName = $_SESSION['first_name'];
     $lastName = $_SESSION['last_name'];
     $email = $_SESSION['email'];
@@ -11,6 +12,7 @@ if(isset($_SESSION['uid'])) {
     echo json_encode(array(
         'success'=>true,
         'uid'=>$uid,
+        'username'=>$username,
         'firstName'=>$firstName,
         'lastName'=>$lastName,
         'email'=>$email,
