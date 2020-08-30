@@ -1,4 +1,4 @@
-let map = L.map("admin_map_id")
+let map = L.map("aud_map_id")
 
 let mapUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
 let tiles = new L.TileLayer(mapUrl, {})
@@ -8,7 +8,7 @@ map.setView([38.246242, 21.7350847], 13);
 
 let heatmapLayer = null
 
-function addHeatmapLayer(data) {
+function audAddHeatmapLayer(data) {
 
     let maxCount = 0
     data.forEach(item => {
@@ -36,7 +36,7 @@ function addHeatmapLayer(data) {
     heatmapLayer.setData(testData);
 }
 
-function removeHeatmap(){
+function audRemoveHeatmap(){
     if (heatmapLayer != null){
         map.removeLayer(heatmapLayer)
         heatmapLayer = null

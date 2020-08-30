@@ -1,14 +1,3 @@
-let startingYear = 2000
-let endingYear = 2020
-let startingMonth = 'jan'
-let endingMonth = 'dec'
-let startingDay = 'mon'
-let endingDay = 'sun'
-let startingHour = 0
-let endingHour = 24
-let activities = []
-
-
 let startingYearSelector = document.querySelector("#starting_year_selector")
 let endingYearSelector = document.querySelector("#ending_year_selector")
 let startingMonthSelector = document.querySelector("#starting_month_selector")
@@ -96,6 +85,8 @@ function calculateParameters(){
 }
 
 function onClick(event){
+    removeHeatmap()
+
     let url = "http://localhost:63342/WebProject/showHeatmap/showHeatmap.php"
 
     let credentials = calculateParameters()

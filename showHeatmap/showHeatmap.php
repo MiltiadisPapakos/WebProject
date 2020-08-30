@@ -25,7 +25,7 @@ $activities = $credentials['activities'];
 $query = "SELECT latitude, longitude, count(*) AS \"count\" FROM locations WHERE"
     . " year >= " . $startingYear . " AND year <= " . $endingYear
     . " AND month >= " . $startingMonth . " AND month <= " . $endingMonth
-    . " AND day >= " . $startingDay . " AND day <= " . $endingDay
+    . " AND day_of_week >= " . $startingDay . " AND day_of_week <= " . $endingDay
     . " AND hour >= " . $startingHour . " AND hour <= " . $endingHour
     . " AND activity in (";
 

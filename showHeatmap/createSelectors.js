@@ -18,14 +18,14 @@ for (let i = 2020; i > 1999; i--){
     createEndingYearSelector.append(option)
 }
 
-for (let i = 0; i < 25; i++){
+for (let i = 0; i < 24; i++){
     let option = document.createElement('option')
     option.text = i.toString() + ":00"
     option.value = i.toString()
     createStartingHourSelector.append(option)
 }
 
-for (let i = 0; i < 25; i++){
+for (let i = 0; i < 24; i++){
     let option = document.createElement('option')
     option.text = i.toString() + ":00"
     option.value = i.toString()

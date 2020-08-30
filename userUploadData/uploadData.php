@@ -13,7 +13,7 @@ $credentials = json_decode($json, true);
 
 $insertQuery = "INSERT INTO locations(uid, key_timestamp, latitude, longitude, activity, heading, confidence, ";
 $insertQuery = $insertQuery . "loc_timestamp, act_timestamp, vertical_accuracy, velocity, accuracy, altitude, ";
-$insertQuery = $insertQuery . "year, month, day, hour) VALUES";
+$insertQuery = $insertQuery . "year, month, day, hour, day_of_week) VALUES";
 
 for ($i=0; $i<sizeof($credentials); $i=$i+1){
     $item = $credentials[$i];
@@ -56,6 +56,8 @@ for ($i=0; $i<sizeof($credentials); $i=$i+1){
     }
 }
 
+error_log($insertQuery);
+
 $connection->query($insertQuery);
 $connection->close();
 
@@ -74,5 +76,10 @@ function getDateInfo($timestamp){
     $split3 = explode(":", $split2[1]);
     $hour = strval(intval($split3[0]) + 2);     // converting to Greek time zone
 
-    return array($year, $month, $day, $hour);
+    $dayOfWeek = date('w', strtotime(explode(" ", $timeString)[0]));
+    if ($dayOfWeek == 0){
+        $day = 7;
+    }
+
+    return array($year, $month, $day, $hour, $dayOfWeek);
 }

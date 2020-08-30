@@ -20,10 +20,12 @@ function appendLocationInsertValues(
     $month = $dateInfo[1];
     $day = $dateInfo[2];
     $hour = $dateInfo[3];
+    $dayOfWeek = $dateInfo[4];
 
     $res = " (\"$uid\", \"$keyTimestamp\", \"$latitude\", \"$longitude\", \"$activity\", ";
     $res = $res . "\"$heading\", \"$confidence\", \"$locTimestamp\", \"$actTimestamp\", \"$verticalAccuracy\", ";
-    $res = $res . "\"$velocity\", \"$accuracy\", \"$altitude\", \"$year\", \"$month\", \"$day\", \"$hour\")";
+    $res = $res . "\"$velocity\", \"$accuracy\", \"$altitude\", \"$year\", \"$month\", \"$day\", \"$hour\", ";
+    $res = $res . "\"$dayOfWeek\")";
 
     return $res;
 }
