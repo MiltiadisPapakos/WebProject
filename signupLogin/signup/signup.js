@@ -118,7 +118,7 @@ function onClick(event){
     ){
         let md5Password = md5(password)
         let uid = md5(email, password)
-        let isAdmin = false
+        let isAdmin = '0'
 
         addUser(uid, username, firstName, lastName, email, md5Password, isAdmin)
     }
