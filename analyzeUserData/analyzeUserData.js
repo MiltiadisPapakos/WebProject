@@ -32,9 +32,11 @@ function calculateParameters(){
         endingMonth = endingMonthSelector.value
     }
 
+    let startingTimestamp = Date.parse(getStartDateString(startingMonth, startingYear))
+    let endingTimestamp = Date.parse(getEndDateString(endingMonth, endingYear))
+
     if (
-        !(compareYears(startingYear, endingYear) || allYearCheck.checked) ||
-        !(compareMonths(startingMonth, endingMonth) || allMonthCheck.checked)
+        !(startingTimestamp <= endingTimestamp)
     ){
         alert("There was an error in the parameters you entered, please try again.")
         return null
@@ -42,10 +44,8 @@ function calculateParameters(){
 
 
     return {
-        startingYear: startingYear,
-        endingYear: endingYear,
-        startingMonth: monthToNum(startingMonth),
-        endingMonth: monthToNum(endingMonth),
+        startingTimestamp: startingTimestamp,
+        endingTimestamp: endingTimestamp
     }
 }
 
@@ -54,6 +54,7 @@ function onClick(event){
     let credentials = calculateParameters()
 
     if (credentials == null) {
+        dataTable.style = "visibility: hidden"
         return
     }
 

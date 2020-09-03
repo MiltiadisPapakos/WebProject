@@ -11,7 +11,7 @@ if(mysqli_connect_errno()){
 $json = file_get_contents('php://input');
 $credentials = json_decode($json, true);
 
-$insertQuery = "INSERT INTO locations(uid, key_timestamp, latitude, longitude, activity, heading, confidence, ";
+$insertQuery = "INSERT INTO locations(uid, key_timestamp, upload_timestamp, latitude, longitude, activity, heading, confidence, ";
 $insertQuery = $insertQuery . "loc_timestamp, act_timestamp, vertical_accuracy, velocity, accuracy, altitude, ";
 $insertQuery = $insertQuery . "year, month, day, hour, day_of_week) VALUES";
 
@@ -38,6 +38,7 @@ for ($i=0; $i<sizeof($credentials); $i=$i+1){
     $insertQuery = $insertQuery.appendLocationInsertValues(
         $uid,
         $keyTimestamp,
+        time(),
         $latitude,
         $longitude,
         $activity,

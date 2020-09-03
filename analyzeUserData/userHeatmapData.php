@@ -13,15 +13,12 @@ if(mysqli_connect_errno()){
 $json = file_get_contents('php://input');
 $credentials = json_decode($json, true);
 
-$startingYear = $credentials['startingYear'];
-$endingYear = $credentials['endingYear'];
-$startingMonth = $credentials['startingMonth'];
-$endingMonth = $credentials['endingMonth'];
+$startingTimestamp = $credentials['startingTimestamp'];
+$endingTimestamp = $credentials['endingTimestamp'];
 
 $query = "SELECT latitude, longitude, count(*) AS \"count\" FROM locations WHERE"
     . " uid like \"{$_SESSION['uid']}\" AND "
-    . " year >= " . $startingYear . " AND year <= " . $endingYear
-    . " AND month >= " . $startingMonth . " AND month <= " . $endingMonth
+    . " key_timestamp >= " . $startingTimestamp . " AND key_timestamp <= " . $endingTimestamp
     . " GROUP BY latitude, longitude;";
 
 

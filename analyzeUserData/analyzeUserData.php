@@ -1,6 +1,8 @@
 <?php
 include "../utils.php";
 
+session_start();
+
 $connection = connectToDb();
 
 if(mysqli_connect_errno()){
@@ -12,17 +14,16 @@ $json = file_get_contents('php://input');
 $credentials = json_decode($json, true);
 
 
-$startingYear = $credentials['startingYear'];
-$endingYear = $credentials['endingYear'];
-$startingMonth = $credentials['startingMonth'];
-$endingMonth = $credentials['endingMonth'];
+$startingTimestamp = $credentials['startingTimestamp'];
+$endingTimestamp = $credentials['endingTimestamp'];
 
 
 $query = "SELECT activity, count(*) as \"count\", max(hour) as \"maxHour\", max(day) as \"maxDay\" FROM locations WHERE"
-    . " year >= " . $startingYear . " AND year <= " . $endingYear
-    . " AND month >= " . $startingMonth . " AND month <= " . $endingMonth
+    . " uid like \"{$_SESSION['uid']}\" AND"
+    . " key_timestamp >= " . $startingTimestamp . " AND key_timestamp <= " . $endingTimestamp
     . " GROUP BY activity;";
 
+error_log($query);
 
 $results = [];
 $result = $connection->query($query);

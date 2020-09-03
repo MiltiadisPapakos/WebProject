@@ -3,6 +3,7 @@
 function appendLocationInsertValues(
     $uid,
     $keyTimestamp,
+    $time,
     $latitude,
     $longitude,
     $activity,
@@ -22,7 +23,7 @@ function appendLocationInsertValues(
     $hour = $dateInfo[3];
     $dayOfWeek = $dateInfo[4];
 
-    $res = " (\"$uid\", \"$keyTimestamp\", \"$latitude\", \"$longitude\", \"$activity\", ";
+    $res = " (\"$uid\", \"$keyTimestamp\", \"$time\", \"$latitude\", \"$longitude\", \"$activity\", ";
     $res = $res . "\"$heading\", \"$confidence\", \"$locTimestamp\", \"$actTimestamp\", \"$verticalAccuracy\", ";
     $res = $res . "\"$velocity\", \"$accuracy\", \"$altitude\", \"$year\", \"$month\", \"$day\", \"$hour\", ";
     $res = $res . "\"$dayOfWeek\")";
