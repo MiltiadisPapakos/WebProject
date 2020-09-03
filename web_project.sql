@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 29, 2020 at 01:11 AM
+-- Generation Time: Sep 03, 2020 at 05:35 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `locations` (
   `uid` varchar(35) NOT NULL,
   `key_timestamp` bigint(20) NOT NULL,
+  `upload_timestamp` bigint(20) NOT NULL,
   `latitude` bigint(20) NOT NULL,
   `longitude` bigint(20) NOT NULL,
   `activity` varchar(25) NOT NULL DEFAULT 'UNKNOWN',
@@ -44,17 +45,18 @@ CREATE TABLE `locations` (
   `year` int(11) NOT NULL,
   `month` int(11) NOT NULL,
   `day` int(11) NOT NULL,
-  `hour` int(11) NOT NULL
+  `hour` int(11) NOT NULL,
+  `day_of_week` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `locations`
 --
 
-INSERT INTO `locations` (`uid`, `key_timestamp`, `latitude`, `longitude`, `activity`, `heading`, `confidence`, `loc_timestamp`, `act_timestamp`, `vertical_accuracy`, `velocity`, `accuracy`, `altitude`, `year`, `month`, `day`, `hour`) VALUES
-('9ce72867c342d0e4a021b4572e6c92ec', 1510083140876, 382446957, 217421968, 'WALKING', -1, -1, 1510083175000, 1510083140876, -1, 16, 5, 51, 2017, 11, 7, 21),
-('9ce72867c342d0e4a021b4572e6c92ec', 1510083155000, 382446957, 217421968, 'UNKNOWN', -1, -1, 1510083155000, -1, -1, 16, 5, 51, 2017, 11, 7, 21),
-('9ce72867c342d0e4a021b4572e6c92ec', 1510083220896, 382446957, 217421968, 'IN_VEHICLE', -1, -1, 1510083156000, 1510083220896, -1, 16, 5, 51, 2017, 11, 7, 21);
+INSERT INTO `locations` (`uid`, `key_timestamp`, `upload_timestamp`, `latitude`, `longitude`, `activity`, `heading`, `confidence`, `loc_timestamp`, `act_timestamp`, `vertical_accuracy`, `velocity`, `accuracy`, `altitude`, `year`, `month`, `day`, `hour`, `day_of_week`) VALUES
+('9ce72867c342d0e4a021b4572e6c92ec', 1510083140876, 1599145178, 382446957, 217421968, 'WALKING', -1, -1, 1510083175000, 1510083140876, -1, 16, 5, 51, 2017, 11, 7, 21, 2),
+('9ce72867c342d0e4a021b4572e6c92ec', 1510083155000, 1599145178, 382446957, 217421968, 'UNKNOWN', -1, -1, 1510083155000, -1, -1, 16, 5, 51, 2017, 11, 7, 21, 2),
+('9ce72867c342d0e4a021b4572e6c92ec', 1510083220896, 1599145178, 382446957, 217421968, 'IN_VEHICLE', -1, -1, 1510083156000, 1510083220896, -1, 16, 5, 51, 2017, 11, 7, 21, 2);
 
 -- --------------------------------------------------------
 
