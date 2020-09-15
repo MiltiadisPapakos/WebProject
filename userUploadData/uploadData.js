@@ -2,6 +2,8 @@ let phpUrl = 'http://localhost:63342/WebProject/userUploadData/uploadData.php'
 let file = null
 const CITY_X = 38.2304620/0.09
 const CITY_Y = 21.7531500/0.12
+let max = 25000
+
 
 function getValueFromJson(json, itemKey){
     if (json.hasOwnProperty(itemKey)){
@@ -46,6 +48,9 @@ function uploadOnDb(event){
     let reader = new FileReader()
     reader.addEventListener("load", getJsonData)
     reader.readAsText(file, 'utf-8')
+
+    mapUploadButton.textContent = "Uploading..."
+    mapUploadButton.setAttribute("disabled", "disabled")
 }
 
 function getJsonData(event){
@@ -55,6 +60,7 @@ function getJsonData(event){
         let formattedData = []
 
         let uid = res['uid']
+
 
         locations.forEach(item => {
             let latitude = item['latitudeE7']
@@ -75,7 +81,7 @@ function getJsonData(event){
                     let confidence = getValueFromJson(activity, 'confidence')
                     let heading = getValueFromJson(activity, 'heading')
 
-                    if (isAllowed(latitude, longitude)) {
+                    if (isAllowed(latitude, longitude) && formattedData.length < max) {
                         formattedData.push({
                             uid: uid,
                             latitude: latitude,
@@ -97,7 +103,7 @@ function getJsonData(event){
                 // let timestamp = item['timestampMs']
                 let type = 'UNKNOWN'
 
-                if (isAllowed(latitude, longitude)) {
+                if (isAllowed(latitude, longitude) && formattedData.length < max) {
                     formattedData.push({
                         uid: uid,
                         latitude: latitude,
@@ -114,18 +120,40 @@ function getJsonData(event){
                     })
                 }
             }
+
+            if (formattedData.length >= max) {
+                simplePhpPostRequest(
+                    phpUrl,
+                    formattedData,
+                    res => {
+                    },
+                    reason => {
+
+                    }
+                )
+
+                formattedData = []
+            }
+
         })
 
-        simplePhpPostRequest(
-            phpUrl,
-            formattedData,
-            res => {
-                alert("Files uploaded successfully.")
-            },
-            reason => {
 
-            }
-        )
+        if (formattedData.length > 0) {
+            simplePhpPostRequest(
+                phpUrl,
+                formattedData,
+                res => {
+                    alert("Files uploaded successfully.")
+                    mapUploadButton.textContent = "Upload!"
+                    mapUploadButton.removeAttribute("disabled")
+                },
+                reason => {
+                    alert("There was an error while uploading your files. Please try again.")
+                }
+            )
+
+            formattedData = []
+        }
 
     })
 }

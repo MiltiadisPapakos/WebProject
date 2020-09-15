@@ -1,6 +1,7 @@
 <?php
 include "../utils.php";
 include "../sqlUtils.php";
+include "../vendor/autoload.php";
 
 $connection = connectToDb();
 
@@ -9,14 +10,17 @@ if(mysqli_connect_errno()){
 }
 
 $json = file_get_contents('php://input');
-$credentials = json_decode($json, true);
+$credentials = \JsonMachine\JsonMachine::fromString($json);
 
-$insertQuery = "INSERT INTO locations(uid, key_timestamp, upload_timestamp, latitude, longitude, activity, heading, confidence, ";
-$insertQuery = $insertQuery . "loc_timestamp, act_timestamp, vertical_accuracy, velocity, accuracy, altitude, ";
-$insertQuery = $insertQuery . "year, month, day, hour, day_of_week) VALUES";
+$dbMax = 4000;
 
-for ($i=0; $i<sizeof($credentials); $i=$i+1){
-    $item = $credentials[$i];
+$insertBase = "INSERT INTO locations(uid, key_timestamp, upload_timestamp, latitude, longitude, activity, heading, confidence, ";
+$insertBase = $insertBase . "loc_timestamp, act_timestamp, vertical_accuracy, velocity, accuracy, altitude, ";
+$insertBase = $insertBase . "year, month, day, hour, day_of_week) VALUES";
+
+$insertQuery = $insertBase;
+
+foreach ($credentials as $id => $item){
 
     $uid = $item['uid'];
     $actTimestamp = $item['actTimestamp'];
@@ -52,14 +56,19 @@ for ($i=0; $i<sizeof($credentials); $i=$i+1){
         $altitude,
         $dateInfo);
 
-    if ($i != sizeof($credentials)-1){
-        $insertQuery = $insertQuery.",";
+    $insertQuery = $insertQuery.",";
+
+    if ($id % $dbMax == 0){
+        $insertQuery = rtrim($insertQuery, ",");
+        $connection->query($insertQuery);
+
+        $insertQuery = $insertBase;
     }
 }
 
-error_log($insertQuery);
-
+$insertQuery = rtrim($insertQuery, ",");
 $connection->query($insertQuery);
+
 $connection->close();
 
 

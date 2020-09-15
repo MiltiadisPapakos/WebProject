@@ -1,0 +1,6 @@
+{
+    "require": {
+      "halaxa/json-machine": "^0.3.3",
+      "ext-mysqli": "*"
+    }
+}
