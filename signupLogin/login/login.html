@@ -4,50 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Rapid Maps</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../signupLogin.css">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="login.js" defer></script>
     <script src="../../utils.js"></script>
     <script src="../../libraries/blueimp-md5/js/md5.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f5f5f5">
 
-    <h1>Welcome to "Site Name"</h1>
-    <img src="../orange.jpg" alt="Orange Square">
+    <div class="container vertical-center">
+        <div class="col-md-12 text-center">
 
-    <br><br>
+            <h4>Welcome to <b style="color: darkorange">Rapid Maps</b></h4>
 
-    <label>
-        Username or email:
-        <br>
-        <input id="li_user_input" type="text">
-    </label>
+            <img src="../orange.jpg" alt="Orange Placeholder" style="height: 72px; width: 72px">
 
-    <br><br>
+            <br><br>
 
-    <label>
-        Password:
-        <br>
-        <input id="li_password_input" type="password">
-    </label>
+            <label>
+                <input id="li_user_input" type="text" placeholder="Username or email" class="form-control">
+            </label>
 
-    <br><br>
+            <br>
 
-    <button id="log_in_button">Log In</button>
+            <label>
+                <input id="li_password_input" type="password" placeholder="Password" class="form-control">
+            </label>
 
-    <br><br>
 
-    <p>
-        <a href="../forgotPassword/forgotPassword.html">Forgot Password?</a>
-        <br><br>
-        Don't have an account? <a href="../signup/signup.html">Sign up</a> instead.
-    </p>
+            <br>
 
-    <br><br>
+            <button id="log_in_button" type="button" class="btn btn-secondary">Log In</button>
 
-    <p class="error">
-        <span id="li_error_span"></span>
-    </p>
+            <br><br>
+
+            <p>
+                <a href="../forgotPassword/forgotPassword.html">Forgot Password?</a>
+                <br><br>
+                Don't have an account? <a href="../signup/signup.html">Sign up</a> instead.
+            </p>
+
+
+
+            <p class="error">
+                &ensp;
+                <span id="li_error_span"></span>
+            </p>
+
+
+        </div>
+    </div>
 
 </body>
 

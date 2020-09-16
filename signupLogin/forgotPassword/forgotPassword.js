@@ -7,7 +7,7 @@ function emailIsCorrect(email){
         errorMessage.textContent = "Please enter a valid email address."
         return false
     }
-    errorMessage.textContent = ""
+    errorMessage.innerHTML = "&ensp;"
     return true
 }
 
@@ -27,7 +27,7 @@ function onClick(event){
                         let password = res['password']
                         emailInput.remove()
                         okButton.remove()
-                        textSpan.innerHTML = "Your new password is: <b>" + password + "</b><br><br>It is strongly suggested to change the password when you log in."
+                        textSpan.innerHTML = "Your new password is: <b style='color: darkorange'>" + password + "</b><br><br>It is strongly suggested to change the password when you log in."
                     })
             },
             reason => {

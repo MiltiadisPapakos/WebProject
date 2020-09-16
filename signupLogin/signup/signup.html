@@ -3,79 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Rapid Maps</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../signupLogin.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="signup.js" defer></script>
     <script src="../../utils.js"></script>
     <script src="../../libraries/blueimp-md5/js/md5.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f5f5f5">
 
-    <h1>Welcome to "Site Name"</h1>
-    <img src="../orange.jpg" alt="Orange Square">
+    <div class="container">
 
-    <br><br>
+        <h3>Welcome to <b style="color: darkorange">Rapid Maps</b></h3>
 
-    <label>
-        Username:
         <br>
-        <input type="text" id="su_username_input">
-    </label>
 
-    <br><br>
+        <div class="row">
 
-    <label>
-        First Name:
-        <br>
-        <input type="text" id="su_first_name_input">
-    </label>
+            <img src="../orange_map.png" alt="Orange Map" class="col-sm-7">
 
-    <br><br>
+            <div class="col-sm-4" style="padding-left: 2em;">
+                <label>
+                    Username:
+                    <br>
+                    <input type="text" id="su_username_input">
+                </label>
 
-    <label>
-        Last Name:
-        <br>
-        <input type="text" id="su_last_name_input">
-    </label>
+                <br>
 
-    <br><br>
+                <label>
+                    First Name:
+                    <br>
+                    <input type="text" id="su_first_name_input">
+                </label>
 
-    <label>
-        Email:
-        <br>
-        <input type="email" id="su_email_input">
-    </label>
+                <br>
 
-    <br><br>
+                <label>
+                    Last Name:
+                    <br>
+                    <input type="text" id="su_last_name_input">
+                </label>
 
-    <label>
-        Password:
-        <br>
-        <input type="password" id="su_password_input">
-    </label>
+                <br>
 
-    <br><br>
+                <label>
+                    Email:
+                    <br>
+                    <input type="email" id="su_email_input">
+                </label>
 
-    <label>
-        Verify Password:
-        <br>
-        <input type="password" id="su_verify_pw_input">
-    </label>
+                <br>
 
-    <br><br>
+                <label>
+                    Password:
+                    <br>
+                    <input type="password" id="su_password_input">
+                </label>
 
-    <button id="su_button_ok">Ok</button>
+                <br>
 
-    <br>
+                <label>
+                    Verify Password:
+                    <br>
+                    <input type="password" id="su_verify_pw_input">
+                </label>
 
-    <p>
-        Already have an account? <a href="../login/login.html">Log in</a> instead.
-    </p>
+                <br><br>
+
+                <button id="su_button_ok" type="button" class="btn btn-secondary">Ok</button>
+
+                <br><br>
+
+                <p>Already have an account? <a href="../login/login.html">Log in</a> instead.</p>
 
 
-    <p class="error">
-        <span id="error_message_span"></span>
-    </p>
+                <p class="error">
+                    <span id="error_message_span"></span>
+                </p>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 

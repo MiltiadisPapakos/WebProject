@@ -23,7 +23,7 @@ function isPasswordCorrect(password, verificationPassword){
         errorMessageSpan.textContent = "The password must contain at least 1 special character (#, $, *, &, @)."
         return false
     }
-    errorMessageSpan.textContent = ""
+    errorMessageSpan.innerHTML = "&ensp;"
     return true
 }
 

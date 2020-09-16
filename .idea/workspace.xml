@@ -13,18 +13,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Made changes in uploadData to enable upload of big files.">
+    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Added site name.">
+      <change afterPath="$PROJECT_DIR$/signupLogin/orange_map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WebProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminMain/adminMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminMain/adminMain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyzeUserData/analyzeUserData.html" beforeDir="false" afterPath="$PROJECT_DIR$/analyzeUserData/analyzeUserData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/showHeatmap/showHeatmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/showHeatmap/showHeatmap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signupLogin/forgotPassword/forgotPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/forgotPassword/forgotPassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/forgotPassword/forgotPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/forgotPassword/forgotPassword.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signupLogin/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/login/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userMain/userMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/userMain/userMain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userUploadData/uploadData.html" beforeDir="false" afterPath="$PROJECT_DIR$/userUploadData/uploadData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signupLogin/signupLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signupLogin.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,23 +66,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/signupLogin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/signupLogin" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/libraries" />
+      <recent name="$PROJECT_DIR$/signup" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/userUploadData" />
       <recent name="$PROJECT_DIR$/signupLogin" />
       <recent name="$PROJECT_DIR$/signUpLogIn" />
       <recent name="$PROJECT_DIR$/login" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/libraries" />
-      <recent name="$PROJECT_DIR$/signup" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -156,7 +155,9 @@
       <workItem from="1600181032547" duration="456000" />
       <workItem from="1600181561342" duration="1313000" />
       <workItem from="1600182912022" duration="3230000" />
-      <workItem from="1600205048660" duration="975000" />
+      <workItem from="1600205048660" duration="1595000" />
+      <workItem from="1600268745901" duration="877000" />
+      <workItem from="1600272478433" duration="9250000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1598171427032</created>
@@ -319,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600205624025</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added site name.">
+      <created>1600206034924</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1600206034924</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +367,8 @@
     <MESSAGE value="Added a feature that enables changes in user's/admin/s profile." />
     <MESSAGE value="Added a column to the DB to store the upload timestamp. Fixed a bug related to user's analyzed data." />
     <MESSAGE value="Made changes in uploadData to enable upload of big files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made changes in uploadData to enable upload of big files." />
+    <MESSAGE value="Added site name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added site name." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1233" y="29" width="824" height="691" key="#CLI_Interpreters" timestamp="1599002573485">
@@ -523,35 +532,36 @@
     <state x="124" y="27" width="900" height="741" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598977280222" />
     <state x="1138" y="27" width="1142" height="741" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598993998715" />
     <state x="1138" y="27" width="1022" height="737" key="SettingsEditor/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1599002574888" />
-    <state x="1580" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600205625768">
+    <state x="1580" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600206036634">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="-351" y="65" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598806474106" />
     <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1599147389428" />
     <state x="1024" y="155" width="1366" height="517" key="Vcs.Push.Dialog.v2/0.27.2390.741@0.27.2390.741" timestamp="1598345588585" />
-    <state x="1580" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1600205625768" />
+    <state x="1580" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1600206036634" />
     <state x="1490" y="311" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598139406450">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1490" y="311" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598139406450" />
-    <state x="0" y="27" width="615" height="741" key="find.popup" timestamp="1598826248857">
-      <screen x="0" y="27" width="1024" height="741" />
+    <state x="0" y="27" width="821" height="741" key="find.popup" timestamp="1600294156844">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="0" y="27" width="615" height="741" key="find.popup/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598826248857" />
-    <state x="347" y="195" width="672" height="677" key="run.anything.popup" timestamp="1600181893995">
+    <state x="0" y="27" width="821" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1600294156844" />
+    <state x="347" y="195" width="672" height="677" key="run.anything.popup" timestamp="1600294008372">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="1371" y="174" key="run.anything.popup/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598799553542" />
-    <state x="347" y="195" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1600181893995" />
+    <state x="347" y="195" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1600294008372" />
     <state x="607" y="195" key="run.anything.popup/0.27.2390.741@0.27.2390.741" timestamp="1598343940447" />
     <state x="260" y="195" key="run.anything.popup/1024.0.1366.768/0.27.1024.741@0.27.1024.741" timestamp="1598391157669" />
     <state x="1371" y="174" key="run.anything.popup/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598385163455" />
-    <state x="346" y="113" width="672" height="655" key="search.everywhere.popup" timestamp="1600181819193">
+    <state x="346" y="113" width="672" height="655" key="search.everywhere.popup" timestamp="1600291304595">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="259" y="113" width="672" height="655" key="search.everywhere.popup/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598211598285" />
     <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598793654272" />
-    <state x="346" y="113" width="672" height="655" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1600181819193" />
+    <state x="346" y="113" width="672" height="655" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1600291304595" />
     <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598374918329" />
   </component>
 </project>
