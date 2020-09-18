@@ -1,3 +1,5 @@
+h4 {padding-top: 12px; position: relative; left: 1em;}
+
 select {margin: 10px;}
 
 label {
@@ -9,27 +11,8 @@ button {
     font-size: large;
     width: 180px;
     height: 40px;
-    position: relative;
-    left: 5em;
-    margin-left: 55px;
-    margin-top: 30px;
-}
-
-table {
-    border: 1px solid orange;
-    border-collapse: collapse;
-    position: relative;
-    left: 1em;
-}
-
-th {
-    border: 1px solid orange;
-    padding: 10px;
-}
-
-td {
-    border: 1px solid orange;
-    padding: 10px;
+    background-color: orange !important;
+    border-color: orange !important;
 }
 
 #aud_map_id {height: 450px}

@@ -1,11 +1,8 @@
-h3 {position: relative; left: 1em}
-img {
-    max-width: 80%;
-    position: relative;
-    left: 2em;
-}
-p{font-size: small}
-#map_id{height: 350px}
+h3 {padding-top: 10px; position: relative; left: 1em;}
+h4 {padding-top: 12px; position: relative; left: 1em;}
+p {font-size: small}
+#map_id {height: 280px}
+button {background-color: orange !important; border-color: orange !important;}
 
 .twoColumn{
     width: 49%;

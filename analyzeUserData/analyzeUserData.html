@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <title>Rapid Maps</title>
 
+    <link rel="shortcut icon" href="../logo_no_text.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="analyzeUserData.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
 
@@ -21,91 +26,140 @@
 
 </head>
 
-<body>
+<body style="background-color: #f5f5f5">
 
-    <h3>Analyze Your Data</h3>
+    <nav class="site-header sticky-top py-1" style="background-color: #434343;">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="http://localhost:63342/WebProject/index.html">
+                <img src="../logo_no_text.png" alt="Logo" style="width: 48px; height: 48px;">
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#" style="color: white;">Show User Data</a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/userUploadData/uploadData.html" style="color: white">Upload Your Data</a>
+            <a class="py-2 d-none d-md-inline-block" href="#" style="color: white">Analyze Your Data</a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">Edit Profile</a>
+        </div>
+    </nav>
 
-    <div class="twoColumn">
-        <div id="aud_map_id"></div>
+    <h4><b style="color: darkorange">Analyze</b> Your Data!</h4>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <div id="aud_map_id"></div>
+            </div>
+
+            <div class="col-sm-7">
+                <div class="row">
+                    <span style="margin-left: 10px;">
+                        Years:
+                    </span>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label>
+                            <select name="starting_year" id="aud_starting_year_selector" class="custom-select">
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label>
+                            <select name="ending_year" id="aud_ending_year_selector" class="custom-select">
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <label style="position:relative; padding-left: 2em">
+                            All
+                            <input type="checkbox" id="aud_year_all_checkbox">
+                        </label>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <span style="margin-left: 10px;">
+                        Months:
+                    </span>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label>
+                            <select name="starting_month" id="aud_starting_month_selector" class="custom-select">
+                                <option value="jan">January</option>
+                                <option value="feb">February</option>
+                                <option value="mar">March</option>
+                                <option value="apr">April</option>
+                                <option value="may">May</option>
+                                <option value="jun">June</option>
+                                <option value="jul">July</option>
+                                <option value="aug">August</option>
+                                <option value="sep">September</option>
+                                <option value="oct">October</option>
+                                <option value="nov">November</option>
+                                <option value="dec">December</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label>
+                            <select name="ending_month" id="aud_ending_month_selector" class="custom-select">
+                                <option value="jan">January</option>
+                                <option value="feb">February</option>
+                                <option value="mar">March</option>
+                                <option value="apr">April</option>
+                                <option value="may">May</option>
+                                <option value="jun">June</option>
+                                <option value="jul">July</option>
+                                <option value="aug">August</option>
+                                <option value="sep">September</option>
+                                <option value="oct">October</option>
+                                <option value="nov">November</option>
+                                <option value="dec">December</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <label style="position:relative; padding-left: 2em">
+                            All
+                            <input type="checkbox" id="aud_month_all_checkbox">
+                        </label>
+                    </div>
+
+                </div>
+
+                <br><br>
+
+                <div class="text-center">
+                    <button id="aud_analyze_data_button" type="button" class="btn btn-primary">Analyze Data</button>
+                </div>
+
+                <br><br>
+
+                <div class="text-center">
+                   <table id="aud_table" style="visibility: hidden" class="table">
+                        <tr>
+                            <th>Activity</th>
+                            <th>% of activity</th>
+                            <th>Hour of day</th>
+                            <th>Day of month</th>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
-    <div>
-        <label>
-            Years:
-            <br>
-            <select name="starting_year" id="aud_starting_year_selector">
-            </select>
-        </label>
-
-        <label>
-            <select name="ending_year" id="aud_ending_year_selector">
-            </select>
-        </label>
-
-        <label style="position:relative; padding-left: 2em">
-            All
-            <input type="checkbox" id="aud_year_all_checkbox">
-        </label>
-
-        <br><br>
-
-        <label>
-            Months:
-            <br>
-            <select name="starting_month" id="aud_starting_month_selector">
-                <option value="jan">January</option>
-                <option value="feb">February</option>
-                <option value="mar">March</option>
-                <option value="apr">April</option>
-                <option value="may">May</option>
-                <option value="jun">June</option>
-                <option value="jul">July</option>
-                <option value="aug">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="nov">November</option>
-                <option value="dec">December</option>
-            </select>
-        </label>
-
-        <label>
-            <select name="ending_month" id="aud_ending_month_selector">
-                <option value="jan">January</option>
-                <option value="feb">February</option>
-                <option value="mar">March</option>
-                <option value="apr">April</option>
-                <option value="may">May</option>
-                <option value="jun">June</option>
-                <option value="jul">July</option>
-                <option value="aug">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="nov">November</option>
-                <option value="dec">December</option>
-            </select>
-        </label>
-
-        <label style="position:relative; padding-left: 2em">
-            All
-            <input type="checkbox" id="aud_month_all_checkbox">
-        </label>
-
-        <br><br><br>
-
-        <button id="aud_analyze_data_button">Analyze Data</button>
-
-        <br><br><br>
-
-        <table id="aud_table" style="visibility: hidden">
-            <tr>
-                <th>Activity</th>
-                <th>% of activity</th>
-                <th>Hour of day</th>
-                <th>Day of month</th>
-            </tr>
-        </table>
-
-    </div>
 
 
 </body>

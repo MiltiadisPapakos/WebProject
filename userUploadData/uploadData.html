@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Rapid Maps</title>
+
+    <link rel="shortcut icon" href="../logo_no_text.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="uploadData.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
@@ -12,44 +18,83 @@
     <script src="uploadData.js" defer></script>
 </head>
 
-<body>
+<body style="background: #f5f5f5">
 
-    <h3>Upload your data!</h3>
+    <nav class="site-header sticky-top py-1" style="background-color: #434343">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="http://localhost:63342/WebProject/index.html">
+                <img src="../logo_no_text.png" alt="Logo" style="width: 48px; height: 48px;">
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#" style="color: white">Show User Data</a>
+            <a class="py-2 d-none d-md-inline-block" href="#" style="color: white">Upload Your Data</a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/analyzeUserData/analyzeUserData.html" style="color: white">Analyze Your Data</a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">Edit Profile</a>
+        </div>
+    </nav>
 
-    <br>
 
-    <div>
-        <div id="map_id" class="twoColumn"></div>
+    <div style="background-image: url('../background.jpg')">
 
-        <div class="twoColumn" style="text-align: center">
-            <br><br><br>
-            <input id="upload_file_input" type="file" accept=".json">
+        <h4><b style="color: darkorange">Upload</b> Your Data!</h4>
 
-            <br><br><br><br><br><br>
-            <button id="upload_undo_button" style="position:relative; left: -9em">Undo</button>
+        <br>
 
-            <br><br><br>
-            <button id="upload_reset_button" style="position:relative; left: -9em">Reset</button>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <div id="map_id"></div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div style="text-align: center">
+                        <div class="align-content-center">
+
+                            <br><br><br>
+
+                            <input id="upload_file_input" type="file" accept=".json" class="form-control-file" style="position: relative; left: 3em">
+
+                            <br><br>
+
+                            <button id="upload_undo_button" type="button" class="btn btn-primary" style="margin: 10px">
+                                Undo
+                            </button>
+
+                            <button id="upload_reset_button" type="button" class="btn btn-primary" style="margin: 10px">
+                                Reset
+                            </button>
+                        </div>
+
+                        <br><br>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <br>
+            <p class="details" style="padding-right: 20px; padding-left: 20px; text-align: left">
+                In order to add your data click the button "Browse" and select a .json file downloaded from google maps.
+                Then click the button "Upload" to upload your data.
+                All data which are outside of the city of Patras will be automatically removed.
+                In addition if you want all the data from a specific area to be removed create a rectangle in this area.
+                <br>
+                To create a rectangle: click on the map, move the mouse on the map, click again when you have created the rectangle you want.
+                You can create more than one rectangles. With the button "Undo" you can erase the last rectangle you created.
+                With the button "Reset" you can erase all rectangles.
+            </p>
+
+            <div class="text-right">
+                <button id="map_upload_button" type="button" class="btn btn-primary" style="margin: 10px">Upload!</button>
+            </div>
 
         </div>
 
     </div>
 
-
-    <div class="oneColumn">
-        <br>
-        <p class="details" style="padding-right: 20px; padding-left: 20px; text-align: left">
-            In order to add your data click the button "Browse" and select a .json file downloaded from google maps.
-            Then click the button "Upload" to upload your data.
-            All data which are outside of the city of Patras will be automatically removed.
-            In addition if you want all the data from a specific area to be removed create a rectangle in this area.
-            <br>
-            To create a rectangle: click on the map, move the mouse on the map, click again when you have created the rectangle you want.
-            You can create more than one rectangles. With the button "Undo" you can erase the last rectangle you created.
-            With the button "Reset" you can erase all rectangles.
-        </p>
-        <button id="map_upload_button" class="leftButton">Upload!</button>
-    </div>
 
 </body>
 
