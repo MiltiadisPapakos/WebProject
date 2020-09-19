@@ -14,17 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Made changes in uploadData to enable upload of big files.">
-      <change afterPath="$PROJECT_DIR$/showUsersInfo/getAddData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showUsersInfo/getLeaderBoard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showUsersInfo/showUserInfo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showUsersInfo/showUserInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showUsersInfo/showUserInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/showUsersInfo/showUserInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WebProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/showUsersInfo/getDateData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analyzeUserData/analyzeUserData.js" beforeDir="false" afterPath="$PROJECT_DIR$/analyzeUserData/analyzeUserData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/showUsersInfo/getAddData.php" beforeDir="false" afterPath="$PROJECT_DIR$/showUsersInfo/getAddData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/showUsersInfo/getLeaderBoard.php" beforeDir="false" afterPath="$PROJECT_DIR$/showUsersInfo/getLeaderBoard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/showUsersInfo/showUserInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/showUsersInfo/showUserInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/showUsersInfo/showUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/showUsersInfo/showUserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/showUsersInfo/showUserInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/showUsersInfo/showUserInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userMain/userMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/userMain/userMain.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/web_project.sql" afterDir="false" />
@@ -163,7 +161,8 @@
       <workItem from="1600181561342" duration="1313000" />
       <workItem from="1600182912022" duration="3230000" />
       <workItem from="1600205048660" duration="975000" />
-      <workItem from="1600533822842" duration="655000" />
+      <workItem from="1600533822842" duration="9396000" />
+      <workItem from="1600544432782" duration="2784000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1598171427032</created>
@@ -326,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600205624025</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Made changes in uploadData to enable upload of big files.">
+      <created>1600534557470</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1600534557470</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +399,10 @@
     </state>
     <state x="0" y="50" width="983" height="660" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598805903183" />
     <state x="1302" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598137787818" />
+    <state x="543" y="93" key="CommitChangelistDialog2" timestamp="1600534783558">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="543" y="93" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1600534783558" />
     <state x="366" y="311" width="517" height="179" key="ComposerInitDialogKey" timestamp="1600183483851">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -514,9 +524,10 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1414" y="113" width="599" height="575" key="NewPhpClassDialog/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1600167738373" />
-    <state x="359" y="338" width="298" height="158" key="NewPhpFileDialog" timestamp="1598826325860">
-      <screen x="0" y="27" width="1024" height="741" />
+    <state x="673" y="441" width="298" height="158" key="NewPhpFileDialog" timestamp="1600537879119">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="673" y="441" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1600537879119" />
     <state x="359" y="338" width="298" height="158" key="NewPhpFileDialog/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598826325860" />
     <state x="1503" y="322" width="397" height="158" key="NewPhpFileDialog/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598808970411" />
     <state x="1024" y="338" width="695" height="158" key="NewPhpFileDialog/0.27.2390.741@0.27.2390.741" timestamp="1598343700020" />
@@ -531,10 +542,10 @@
     <state x="124" y="27" width="900" height="741" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598977280222" />
     <state x="1138" y="27" width="1142" height="741" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598993998715" />
     <state x="1138" y="27" width="1022" height="737" key="SettingsEditor/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1599002574888" />
-    <state x="559" y="179" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600534437109">
+    <state x="559" y="179" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600534800483">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="559" y="179" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1600534437109" />
+    <state x="559" y="179" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1600534800483" />
     <state x="-351" y="65" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598806474106" />
     <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1599147389428" />
     <state x="1024" y="155" width="1366" height="517" key="Vcs.Push.Dialog.v2/0.27.2390.741@0.27.2390.741" timestamp="1598345588585" />
@@ -556,9 +567,10 @@
     <state x="607" y="195" key="run.anything.popup/0.27.2390.741@0.27.2390.741" timestamp="1598343940447" />
     <state x="260" y="195" key="run.anything.popup/1024.0.1366.768/0.27.1024.741@0.27.1024.741" timestamp="1598391157669" />
     <state x="1371" y="174" key="run.anything.popup/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1598385163455" />
-    <state x="346" y="113" width="672" height="655" key="search.everywhere.popup" timestamp="1600181819193">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="486" y="122" width="945" height="929" key="search.everywhere.popup" timestamp="1600539671171">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="486" y="122" width="945" height="929" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1600539671171" />
     <state x="259" y="113" width="672" height="655" key="search.everywhere.popup/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598211598285" />
     <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598793654272" />
     <state x="346" y="113" width="672" height="655" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1600181819193" />

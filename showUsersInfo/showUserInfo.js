@@ -2,13 +2,17 @@ let tableInitialHTML = "<tr>\n" + "<th>Rank</th>\n" + "<th>Eco-Precentage</th>\n
     "<th>Name</th>\n" + "<th>Month</th>\n" + "</tr>"
 
 let showInfo = 'http://localhost:63342/WebProject/showUsersInfo/showUserInfo.html'
-let phpUrlLeaderBoard = 'http://localhost:63342/WebProject/showUsersInfo/showUserInfo.php'
-let phpUrlUserInfo = 'http://localhost:63342/WebProject/showUsersInfo/getLeaderBoard.php'
+let phpUrlLeaderBoard = 'http://localhost:63342/WebProject/showUsersInfo/getLeaderBoard.php'
+let phpUrlUserInfo = 'http://localhost:63342/WebProject/showUsersInfo/showUserInfo.php'
 let phpUrlAddInfo = 'http://localhost:63342/WebProject/showUsersInfo/getAddData.php'
+let phpUrlDateData = 'http://localhost:63342/WebProject/showUsersInfo/getDateData.php'
 
 let showInfoButton = document.querySelector("#user_profile_info_button")
 let eco_score = document.querySelector("#eco_score")
+let last_update =document.querySelector("#last_update")
 let leaderBoard = document.querySelector("#leaderBoard")
+let first_date = document.querySelector("#first_date")
+let last_date = document.querySelector("#last_date")
 
 
 if (showInfoButton != null) {
@@ -60,7 +64,7 @@ function createTable(data, table, userUid) {
                 "</tr>")
         }
         if(uid_s === userUid){
-            eco_score.innerText = 10
+            eco_score.innerText = eco_percentage
 
         }
     })
@@ -84,8 +88,6 @@ function createTable(data, table, userUid) {
             let month_s = rowData['month_s']
             xlabels.push(month_s)
             yval.push(eco_percentage)
-
-
         })
 
 
@@ -103,6 +105,23 @@ function createTable(data, table, userUid) {
 function setUploadDate(data){
     data.forEach(rowData => {
         let upload_timestamp = rowData['upload_timestamp']
-
+        last_update.innerText= upload_timestamp
     })
     }
+simplePhpPostRequest(phpUrlDateData, {},
+    res => {
+        res.json()
+            .then(res => {
+                    console.log(res)
+                    setUserDates(res)
+                },
+                reason => {
+                    alert("Failed")
+                })
+    })
+
+function setUserDates(data){
+        first_date.innerText = data['first_date']
+        last_date.innerText =  data['last_date']
+
+}
