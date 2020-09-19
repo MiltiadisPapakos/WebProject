@@ -70,44 +70,52 @@ function createTable(data, table, userUid) {
     })
 }
 
-    simplePhpPostRequest(phpUrlUserInfo, {},
-        res => {
-            res.json()
-                .then(res => {
-                        setValuesInChart(res)
-                    },
-                    reason => {
-                        alert("Failed")
-                    })
+simplePhpPostRequest(phpUrlUserInfo, {},
+    res => {
+    res.json()
+        .then(res => {
+            setValuesInChart(res)
+            },
+            reason => {
+            alert("Failed 1")
         })
+})
 
 
-    function setValuesInChart(data) {
-        data.forEach(rowData => {
-            let eco_percentage = rowData['eco_percentage'] * 100
-            let month_s = rowData['month_s']
-            xlabels.push(month_s)
-            yval.push(eco_percentage)
-        })
+function setValuesInChart(data) {
+    data.forEach(rowData => {
+        let eco_percentage = rowData['eco_percentage'] * 100
+        let month_s = rowData['month_s']
+        console.log(month_s)
+        console.log(Math.ceil(eco_percentage))
+        xlabels.push(month_s)
+        yval.push(eco_percentage)
 
-
-    }
-    simplePhpPostRequest(phpUrlAddInfo, {},
-        res => {
-            res.json()
-                .then(res => {
-                        setUploadDate(res)
-                    },
-                    reason => {
-                        alert("Failed")
-                    })
+        console.log("_________________________________")
+        console.log(xlabels.length)
+        console.log(yval.length)
     })
+}
+
+
+simplePhpPostRequest(phpUrlAddInfo, {},
+    res => {
+    res.json()
+        .then(res => {
+            setUploadDate(res)
+            },
+            reason => {
+            alert("Failed 2")
+        })
+})
+
 function setUploadDate(data){
     data.forEach(rowData => {
         let upload_timestamp = rowData['upload_timestamp']
         last_update.innerText= upload_timestamp
     })
-    }
+}
+
 simplePhpPostRequest(phpUrlDateData, {},
     res => {
         res.json()
@@ -116,12 +124,11 @@ simplePhpPostRequest(phpUrlDateData, {},
                     setUserDates(res)
                 },
                 reason => {
-                    alert("Failed")
+                    alert("Failed 3")
                 })
     })
 
 function setUserDates(data){
         first_date.innerText = data['first_date']
         last_date.innerText =  data['last_date']
-
 }

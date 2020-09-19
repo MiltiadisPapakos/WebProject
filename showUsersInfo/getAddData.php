@@ -1,6 +1,5 @@
 <?php
-
-include '..\utils.php';
+include '../utils.php';
 
 session_start();
 $connection = connectToDb();

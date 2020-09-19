@@ -54,7 +54,7 @@
     <br><br>
     <canvas id="chart" width="300" height="300"></canvas>
     <script>
-        const ctx = document.getElementById('chart').getContext('2d');
+        const ctx = document.querySelector('#chart').getContext('2d');
         const xlabels = [];
         const yval = [];
         const myChart = new Chart(ctx, {

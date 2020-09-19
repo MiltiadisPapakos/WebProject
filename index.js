@@ -10,10 +10,10 @@ simplePhpPostRequest(
                 if (success){
                     let isAdmin = res['isAdmin']
                     if(isAdmin === '0'){
-                        window.location.replace("http://localhost:63342/WebProject/userUploadData/uploadData.html")
+                        window.location.replace("http://localhost:63342/WebProject/showUsersInfo/showUserInfo.html")
                     }
                     else {
-                        window.location.replace("http://localhost:63342/WebProject/showHeatmap/showHeatmap.html")
+                        window.location.replace("http://localhost:63342/WebProject/adminDashboard/adminDashboard.html")
                     }
                 }
                 else {
