@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Rapid Maps</title>
+    <link rel="shortcut icon" href="../images/logo_no_text.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="showHeatmap.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
 
@@ -23,146 +28,182 @@
 
 <body>
 
-    <h3>Heatmap Data</h3>
+    <nav class="site-header sticky-top py-1" style="background-color: #434343">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="http://localhost:63342/WebProject/index.html">
+                <img src="../images/logo_no_text.png" alt="Logo" style="width: 48px; height: 48px;">
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#" style="color: white">Dashboard</a>
+            <a class="py-2 d-none d-md-inline-block" href="#" style="color: white">Heatmap Data</a>
+            <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">Edit Profile</a>
+        </div>
+    </nav>
 
-    <div id="admin_map_id" class="twoColumn"></div>
+    <h4><b style="color: orange">Heatmap</b> Data</h4>
 
-    <div>
-        <label>
-            Years:
-            <br>
-            <select name="starting_year" id="starting_year_selector">
-            </select>
-        </label>
+    <div class="container">
 
-        <label>
-            <select name="ending_year" id="ending_year_selector">
-            </select>
-        </label>
+        <div class="row">
 
-        <label style="position:relative; padding-left: 2em">
-            All
-            <input type="checkbox" id="year_all_checkbox">
-        </label>
+            <div class="col-sm-4">
+                <div id="admin_map_id" class="twoColumn"></div>
+            </div>
 
-        <br><br>
+            <div class="col-sm-5">
+                <label>
+                    Years:
+                    <br>
+                    <select name="starting_year" id="starting_year_selector" class="custom-select">
+                    </select>
+                </label>
 
-        <label>
-            Months:
-            <br>
-            <select name="starting_month" id="starting_month_selector">
-                <option value="jan">January</option>
-                <option value="feb">February</option>
-                <option value="mar">March</option>
-                <option value="apr">April</option>
-                <option value="may">May</option>
-                <option value="jun">June</option>
-                <option value="jul">July</option>
-                <option value="aug">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="nov">November</option>
-                <option value="dec">December</option>
-            </select>
-        </label>
+                <label>
+                    <select name="ending_year" id="ending_year_selector" class="custom-select">
+                    </select>
+                </label>
 
-        <label>
-            <select name="ending_month" id="ending_month_selector">
-                <option value="jan">January</option>
-                <option value="feb">February</option>
-                <option value="mar">March</option>
-                <option value="apr">April</option>
-                <option value="may">May</option>
-                <option value="jun">June</option>
-                <option value="jul">July</option>
-                <option value="aug">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="nov">November</option>
-                <option value="dec">December</option>
-            </select>
-        </label>
+                <label style="position:relative; padding-left: 2em">
+                    All
+                    <input type="checkbox" id="year_all_checkbox">
+                </label>
 
-        <label style="position:relative; padding-left: 2em">
-            All
-            <input type="checkbox" id="month_all_checkbox">
-        </label>
+                <br>
 
-        <br><br>
+                <label>
+                    Months:
+                    <br>
+                    <select name="starting_month" id="starting_month_selector" class="custom-select">
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov">November</option>
+                        <option value="dec">December</option>
+                    </select>
+                </label>
 
-        <label>
-            Days:
-            <br>
-            <select name="starting_day" id="starting_day_selector">
-                <option value="mon">Monday</option>
-                <option value="tue">Tuesday</option>
-                <option value="wed">Wednesday</option>
-                <option value="thu">Thursday</option>
-                <option value="fri">Friday</option>
-                <option value="sat">Saturday</option>
-                <option value="sun">Sunday</option>
-            </select>
-        </label>
+                <label>
+                    <select name="ending_month" id="ending_month_selector" class="custom-select">
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov">November</option>
+                        <option value="dec">December</option>
+                    </select>
+                </label>
 
-        <label>
-            <select name="ending_day" id="ending_day_selector">
-                <option value="mon">Monday</option>
-                <option value="tue">Tuesday</option>
-                <option value="wed">Wednesday</option>
-                <option value="thu">Thursday</option>
-                <option value="fri">Friday</option>
-                <option value="sat">Saturday</option>
-                <option value="sun">Sunday</option>
-            </select>
-        </label>
+                <label style="position:relative; padding-left: 2em">
+                    All
+                    <input type="checkbox" id="month_all_checkbox">
+                </label>
 
-        <label style="position:relative; padding-left: 2em">
-            All
-            <input type="checkbox" id="day_all_checkbox">
-        </label>
+                <br>
 
-        <br><br>
+                <label>
+                    Days:
+                    <br>
+                    <select name="starting_day" id="starting_day_selector" class="custom-select">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                        <option value="thu">Thursday</option>
+                        <option value="fri">Friday</option>
+                        <option value="sat">Saturday</option>
+                        <option value="sun">Sunday</option>
+                    </select>
+                </label>
 
-        <label>
-            Hours:
-            <br>
-            <select name="starting_hour" id="starting_hour_selector">
-            </select>
-        </label>
+                <label>
+                    <select name="ending_day" id="ending_day_selector" class="custom-select">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                        <option value="thu">Thursday</option>
+                        <option value="fri">Friday</option>
+                        <option value="sat">Saturday</option>
+                        <option value="sun">Sunday</option>
+                    </select>
+                </label>
 
-        <label>
-            <select name="ending_hour" id="ending_hour_selector">
-            </select>
-        </label>
+                <label style="position:relative; padding-left: 2em">
+                    All
+                    <input type="checkbox" id="day_all_checkbox">
+                </label>
 
-        <label style="position:relative; padding-left: 2em">
-            All
-            <input type="checkbox" id="hour_all_checkbox">
-        </label>
+                <br>
 
-        <br><br>
+                <label>
+                    Hours:
+                    <br>
+                    <select name="starting_hour" id="starting_hour_selector" class="custom-select">
+                    </select>
+                </label>
 
-        <label>
-            Activity:
-            <br>
-            <select name="activity" id="activity_selector" multiple>
-            </select>
-        </label>
+                <label>
+                    <select name="ending_hour" id="ending_hour_selector" class="custom-select">
+                    </select>
+                </label>
+
+                <label style="position:relative; padding-left: 2em">
+                    All
+                    <input type="checkbox" id="hour_all_checkbox">
+                </label>
+
+                <br>
+
+                <label>
+                    Activity:
+                    <br>
+                    <select name="activity" id="activity_selector" multiple class="custom-select">
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="col-sm-3 text-center">
+
+                <br><br><br>
+
+                <button id="heatmap_show_button" type="button" class="btn btn-primary">Show Data</button>
+
+                <br><br><br>
+
+                <button id="export_data_button" type="button" class="btn btn-primary">Export Data</button>
+
+                <br><br>
+
+                <label style="position: relative; left: 0">
+                    <select name="file_type" id="file_type_select" class="custom-select" style="margin: 0">
+                        <option value="csv">CSV</option>
+                        <option value="json">JSON</option>
+                        <option value="xml">XML</option>
+                    </select>
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+
+
+        </div>
 
     </div>
-
-
-    <button id="heatmap_show_button">Show Data</button>
-
-    <button id="export_data_button">Export Data</button>
-
-    <label style="margin-left: 20px">
-        <select name="file_type" id="file_type_select">
-            <option value="csv">CSV</option>
-            <option value="json">JSON</option>
-            <option value="xml">XML</option>
-        </select>
-    </label>
 
 </body>
 

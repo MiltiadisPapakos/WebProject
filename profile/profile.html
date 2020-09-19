@@ -4,106 +4,130 @@
 <head>
     <meta charset="UTF-8">
     <title>Rapid Maps</title>
+    <link rel="shortcut icon" href="../images/logo_no_text.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="profile.css">
 
     <script src="../libraries/blueimp-md5/js/md5.min.js"></script>
     <script src="../utils.js"></script>
     <script src="profile.js" defer></script>
+    <script src="designNavBar.js" defer></script>
 </head>
 
 <body>
 
-    <h3>Edit Your Profile</h3>
+    <nav class="site-header sticky-top py-1" style="background-color: #434343">
+    </nav>
 
     <br>
 
-    <label class="leftCenter">
-        <label>
-            &nbsp&nbsp&nbspUsername:
-            <br>
-            <input type="text" id="profile_username_input" disabled>
-        </label>
+    <div class="container">
 
-        <br><br>
-
-        <label>
-            &nbsp&nbsp&nbspFirst Name:
-            <br>
-            <input type="text" id="profile_first_name_input">
-        </label>
-
-        <br><br>
-
-        <label>
-            &nbsp&nbsp&nbspLast Name:
-            <br>
-            <input type="text" id="profile_last_name_input">
-        </label>
-
-        <br><br>
-
-        <label>
-            &nbsp&nbsp&nbspEmail:
-            <br>
-            <input type="email" id="profile_email_input" disabled>
-        </label>
-
-        <br><br>
-
-        <label>
-            <button id="change_pw_button">Change Password</button>
-        </label>
+        <div class="row">
+            <h4 id="h"><b style="color: orange">Edit</b> Your Profile</h4>
+        </div>
 
         <br>
 
-        <label>
-            <button id="profile_update_button">Update</button>
-        </label>
-    </label>
+        <div class="row">
 
+            <div class="col-sm-5 text-center">
+                <label>
+                    &nbsp&nbsp&nbspUsername:
+                    <br>
+                    <input type="text" id="profile_username_input" disabled>
+                </label>
 
-    <label id="profile_passwords_label" class="right" style="visibility: hidden">
+                <br>
 
-        <label>
-            Old Password:
-            <br>
-            <input type="password" id="profile_old_pw_input">
-        </label>
+                <label>
+                    &nbsp&nbsp&nbspFirst Name:
+                    <br>
+                    <input type="text" id="profile_first_name_input">
+                </label>
 
-        <br><br>
+                <br>
 
-        <label>
-            &nbsp&nbspNew Password:
-            <br>
-            <input type="password" id="profile_new_pw_input">
-        </label>
+                <label>
+                    &nbsp&nbsp&nbspLast Name:
+                    <br>
+                    <input type="text" id="profile_last_name_input">
+                </label>
 
-        <br><br>
+                <br>
 
-        <label>
-            &nbsp&nbspRepeat New Password:
-            <br>
-            <input type="password" id="profile_repeat_new_pw_input">
-        </label>
+                <label>
+                    &nbsp&nbsp&nbspEmail:
+                    <br>
+                    <input type="email" id="profile_email_input" disabled>
+                </label>
 
-        <br><br>
+                <br>
 
-        <button
-                id="profile_change_pw_ok_button"
-                style="width: 75px; margin-left:11em">
-            Ok
-        </button>
+                <label>
+                    <button id="change_pw_button" type="button" class="btn btn-primary">Change Password</button>
+                </label>
 
-    </label>
+                <br>
 
+                <label>
+                    <button id="profile_update_button" type="button" class="btn btn-primary">Update</button>
+                </label>
+            </div>
 
-    <p
-            id="profile_error_p"
-            class="leftCenter"
-            style="font-size: small; color: dimgrey"
-    >
-    </p>
+            <div id="profile_passwords_label" class="col-sm-3 text-center" style="visibility: hidden; padding-top: 3em">
+
+                <label>
+                    Old Password:
+                    <br>
+                    <input type="password" id="profile_old_pw_input">
+                </label>
+
+                <br>
+
+                <label>
+                    &nbsp&nbspNew Password:
+                    <br>
+                    <input type="password" id="profile_new_pw_input">
+                </label>
+
+                <br>
+
+                <label>
+                    &nbsp&nbspRepeat New Password:
+                    <br>
+                    <input type="password" id="profile_repeat_new_pw_input">
+                </label>
+
+                <br>
+
+                <button
+                        id="profile_change_pw_ok_button"
+                        style="width: 75px; margin-left:11em"
+                        type="button"
+                        class="btn btn-primary">
+                    Ok
+                </button>
+
+            </div>
+
+        </div>
+
+<!--        <br>-->
+
+        <div class="row" style="padding-top: 4px;">
+            <p
+                    id="profile_error_p"
+                    class="col-sm-5 text-center"
+                    style="font-size: small; color: dimgrey"
+            >
+            </p>
+        </div>
+
+    </div>
 
 </body>
 

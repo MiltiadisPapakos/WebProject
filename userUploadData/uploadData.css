@@ -22,5 +22,17 @@ button {background-color: orange !important; border-color: orange !important;}
 }
 
 .details{
-    color: dimgrey;
+    color: #f4f4f4;
+}
+
+.backgroundImage {
+    background-image: url('../background.jpg');
+    background-repeat: no-repeat;
+
+    height: 100vh;
+
+    background-position: center;
+    background-size: cover;
+
+    background-color: black;
 }
