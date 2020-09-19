@@ -52,14 +52,14 @@ function createTable(data, table, userUid) {
             table.innerHTML += ("<tr>" +
                 ("<td>" + i + "</td>") +
                 ("<td>" + eco_percentage +"%"+ "</td>") +
-                ("<td>" + first_name + " " + last_name + "</td>") +
+                ("<td>" + first_name + " " + last_name.charAt(0)+"." + "</td>") +
                 ("<td>" + month_s + "</td>") +
                 "</tr>")
         } else if (uid_s === userUid && i > 3) {
             table.innerHTML += ("<tr>" +
                 ("<td>" + i + "</td>") +
                 ("<td>" + eco_percentage + "%"+ "</td>") +
-                ("<td>" + first_name + " " + last_name + "(You)" + "</td>") +
+                ("<td>" + first_name + " " + last_name.charAt(0)+"." + "(You)" + "</td>") +
                 ("<td>" + month_s + "</td>") +
                 "</tr>")
         }

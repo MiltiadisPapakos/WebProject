@@ -5,6 +5,9 @@
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" media="screen" href="showUserInfo.css"/>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
     <script src="../libraries/blueimp-md5/js/md5.min.js"></script>
     <script src="../utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -13,47 +16,61 @@
 
 </head>
 <body>
- <div>
-    <h1>Your info is safe with us:</h1>
-        <label>Your eco-score:</label>
-        <output id="eco_score"> </output>
+<nav class="site-header sticky-top py-1" style="background-color: #434343;">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="http://localhost:63342/WebProject/index.html">
+            <img src="../logo_no_text.png" alt="Logo" style="width: 48px; height: 48px;">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="#" style="color: white;">Show User Data</a>
+        <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/userUploadData/uploadData.html" style="color: white">Upload Your Data</a>
+        <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/analyzeUserData/analyzeUserData.html" style="color: white">Analyze Your Data</a>
+        <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">Edit Profile</a>
+    </div>
+</nav>
 
+         <h1>My profile info:</h1>
     <br><br>
 
-    <label> Dates: </label>
-     <output id="first_date"></output>
-     <output id="last_date"></output>
-    <br><br>
+    <div class="container">
+        <div class="row">
+             <div class="col-md-3">
+                 <br>
+                 <label>Your eco-score:</label>
+                 <output id="eco_score"> </output>
+                 <br><br>
+
+                 <label> Dates: </label>
+                 <output id="first_date"></output>
+                 <output id="last_date"></output>
+                 <br><br>
 
 
-    <label>Last Update:</label>
-     <output id="last_update"> </output>
-    <br><br>
+                 <label>Last Update:</label>
+                 <output id="last_update"> </output>
 
-    <label>
-        Top 3 Users:
+             </div>
 
-        <br>
 
-    </label>
-    <table id="leaderBoard" style="visibility: visible">
-        <tr>
-            <th>Rank</th>
-            <th>Eco-precentage</th>
-            <th>Name</th>
-            <th>Month</th>
-        </tr>
-    </table>
-    <br><br>
-    <label>
-        Your position:
-        <br>
+             <div class="col-md-5">
+                 <label> Top 3 Users:</label>
+                 <table id="leaderBoard"  class="table">
+                     <tr>
+                         <th>Rank</th>
+                         <th>Eco-precentage</th>
+                         <th>Name</th>
+                         <th>Month</th>
+                     </tr>
+                 </table>
+             </div>
 
-    </label>
 
-    <br><br>
-    <canvas id="chart" width="300" height="300"></canvas>
-    <script>
+
+
+
+            <div class="col-md-4">
+            <label> Your position:</label>
+            <canvas id="chart" width="300" height="300"></canvas>
+            <script>
         const ctx = document.getElementById('chart').getContext('2d');
         const xlabels = [];
         const yval = [];
@@ -65,11 +82,11 @@
                     label: 'Eco-Percentage',
                     data: yval,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
+                        'rgb(255,165,0)',
 
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
+                        'rgb(255,69,0)',
 
                     ],
                     borderWidth: 1
@@ -88,7 +105,12 @@
         }
         });
     </script>
+            </div>
+        </div>
+    </div>
+
+
+
      <script src= "../showUsersInfo/showUserInfo.js"></script>
- </div>
 </body>
 </html>
