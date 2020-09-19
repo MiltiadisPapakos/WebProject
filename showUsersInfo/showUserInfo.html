@@ -21,13 +21,13 @@
     <br><br>
 
     <label> Dates: </label>
-     <div id="dates"></div>
-
+     <output id="first_date"></output>
+     <output id="last_date"></output>
     <br><br>
 
 
     <label>Last Update:</label>
-     <div id="last_update"></div>
+     <output id="last_update"> </output>
     <br><br>
 
     <label>
@@ -79,9 +79,9 @@
                 responsive: false,
 
                 scales: {
+                    display: true,
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
                     }
                 }]
             }
