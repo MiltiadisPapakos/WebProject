@@ -13,6 +13,5 @@
     <orderEntry type="library" name="heatmapjs" level="application" />
     <orderEntry type="library" name="leaflet-heatmap" level="application" />
     <orderEntry type="library" name="json2csv" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>
