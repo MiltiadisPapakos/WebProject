@@ -70,52 +70,79 @@ function createTable(data, table, userUid) {
     })
 }
 
-simplePhpPostRequest(phpUrlUserInfo, {},
-    res => {
-    res.json()
-        .then(res => {
-            setValuesInChart(res)
-            },
-            reason => {
-            alert("Failed 1")
+    simplePhpPostRequest(phpUrlUserInfo, {},
+        res => {
+            res.json()
+                .then(res => {
+                        setValuesInChart(res)
+                    },
+                    reason => {
+                        alert("Failed")
+                    })
         })
-})
 
 
-function setValuesInChart(data) {
-    data.forEach(rowData => {
-        let eco_percentage = rowData['eco_percentage'] * 100
-        let month_s = rowData['month_s']
-        console.log(month_s)
-        console.log(Math.ceil(eco_percentage))
-        xlabels.push(month_s)
-        yval.push(eco_percentage)
+    function setValuesInChart(data) {
+        const ctx = document.getElementById('chart').getContext('2d');
+        const xlabels = [];
+        const yval = [];
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: xlabels,
+                datasets: [{
+                    label: 'Eco-Percentage',
+                    data: yval,
+                    backgroundColor: [
+                        'rgb(255,165,0)',
 
-        console.log("_________________________________")
-        console.log(xlabels.length)
-        console.log(yval.length)
+                    ],
+                    borderColor: [
+                        'rgb(255,69,0)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: false,
+
+                scales: {
+                    display: true,
+                    yAxes: [{
+                        ticks: {
+                        }
+                    }]
+                }
+            }
+        });
+        data.forEach(rowData => {
+            let eco_percentage = rowData['eco_percentage'] * 100
+            let month_s = rowData['month_s']
+
+            xlabels.push(month_s)
+            yval.push(eco_percentage)
+
+        })
+
+
+    }
+    simplePhpPostRequest(phpUrlAddInfo, {},
+        res => {
+            res.json()
+                .then(res => {
+                        setUploadDate(res)
+                    },
+                    reason => {
+                        alert("Failed")
+                    })
     })
-}
-
-
-simplePhpPostRequest(phpUrlAddInfo, {},
-    res => {
-    res.json()
-        .then(res => {
-            setUploadDate(res)
-            },
-            reason => {
-            alert("Failed 2")
-        })
-})
-
 function setUploadDate(data){
     data.forEach(rowData => {
         let upload_timestamp = rowData['upload_timestamp']
         last_update.innerText= upload_timestamp
     })
-}
-
+    }
 simplePhpPostRequest(phpUrlDateData, {},
     res => {
         res.json()
@@ -124,11 +151,12 @@ simplePhpPostRequest(phpUrlDateData, {},
                     setUserDates(res)
                 },
                 reason => {
-                    alert("Failed 3")
+                    alert("Failed")
                 })
     })
 
 function setUserDates(data){
         first_date.innerText = data['first_date']
         last_date.innerText =  data['last_date']
+
 }
