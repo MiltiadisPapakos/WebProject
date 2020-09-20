@@ -17,7 +17,7 @@ let dataTable = document.querySelector("#aud_table")
 analyzeDataButton.addEventListener('click', onClick)
 
 
-function calculateParameters(){
+function calculateParameters(startingIndex, endingIndex){
     let startingYear = 2000
     let endingYear = 2020
     let startingMonth = 'jan'
@@ -45,7 +45,9 @@ function calculateParameters(){
 
     return {
         startingTimestamp: startingTimestamp,
-        endingTimestamp: endingTimestamp
+        endingTimestamp: endingTimestamp,
+        startingIndex: startingIndex,
+        endingIndex: endingIndex
     }
 }
 
@@ -97,7 +99,9 @@ function createTable(data, table){
             "</tr>")
     })
 
-    getHeatmapData()
+    getRecordsNumber(getHeatmapData)
+    // getHeatmapData()
+    // generateHeatmap()
 }
 
 
@@ -121,10 +125,10 @@ function getPercentage(part, total){
 }
 
 
-function getHeatmapData(){
+function getHeatmapData(startingIndex, endingIndex){
     let audHeatmapUrl = "http://localhost:63342/WebProject/analyzeUserData/userHeatmapData.php"
 
-    let heatmapCredentials = calculateParameters()
+    let heatmapCredentials = calculateParameters(startingIndex, endingIndex)
 
     simplePhpPostRequest(
         audHeatmapUrl,
@@ -139,4 +143,21 @@ function getHeatmapData(){
 
         }
     )
+
+}
+
+function getRecordsNumber(onSuccess){
+    getRecords(count => {
+        let i = 0
+        onSuccess(i, i + 999)
+        let intervalId = setInterval(() => {
+                i += 1000
+                onSuccess(i, i + 999)
+                if (i > count){
+                    clearInterval(intervalId)
+                }
+            },
+            600)
+        // }
+    })
 }

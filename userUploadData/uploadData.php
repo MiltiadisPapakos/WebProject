@@ -84,7 +84,14 @@ function getDateInfo($timestamp){
     $day = $split2[0];
 
     $split3 = explode(":", $split2[1]);
-    $hour = strval(intval($split3[0]) + 2);     // converting to Greek time zone
+    $hour = intval($split3[0]) + 2;     // converting to Greek time zone
+    if ($hour == 24){
+        $hour = 0;
+    }
+    else if($hour == 25){
+        $hour = 1;
+    }
+    $hour = strval($hour);
 
     $dayOfWeek = date('w', strtotime(explode(" ", $timeString)[0]));
     if ($dayOfWeek == 0){

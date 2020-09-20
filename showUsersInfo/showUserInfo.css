@@ -9,12 +9,7 @@ th{
 }
 
 table,th,td{
-    border:  1px solid black;
-    border-collapse: collapse;
     padding: 10px;
 }
-h1{
-    text-align: center;
-    color: #ffa500
-;
-}
+
+h4 {position: relative; padding-left: 2em; padding-top: 10px;}

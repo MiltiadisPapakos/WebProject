@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
+    <link rel="shortcut icon" href="../images/logo_no_text.png">
+
     <link rel="stylesheet" type="text/css" media="screen" href="showUserInfo.css"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bottomCookieBar/bottomCookieBar.css">
+    <script src="../bottomCookieBar/bottomCookieBar.js" defer> </script>
 
     <script src="../libraries/blueimp-md5/js/md5.min.js"></script>
     <script src="../utils.js"></script>
@@ -19,16 +24,16 @@
 <nav class="site-header sticky-top py-1" style="background-color: #434343;">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2" href="http://localhost:63342/WebProject/index.html">
-            <img src="../logo_no_text.png" alt="Logo" style="width: 48px; height: 48px;">
+            <img src="../images/logo_no_text.png" alt="Logo" style="width: 48px; height: 48px;">
         </a>
         <a class="py-2 d-none d-md-inline-block" href="#" style="color: white;">Show User Data</a>
         <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/userUploadData/uploadData.html" style="color: white">Upload Your Data</a>
         <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/analyzeUserData/analyzeUserData.html" style="color: white">Analyze Your Data</a>
-        <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">Edit Profile</a>
+        <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">My Profile</a>
     </div>
 </nav>
 
-         <h1>My profile info:</h1>
+    <h4>My profile <b style="color: orange">info</b>:</h4>
     <br><br>
 
     <div class="container">
@@ -52,8 +57,8 @@
 
 
              <div class="col-md-5">
-                 <label> Top 3 Users:</label>
-                 <table id="leaderBoard"  class="table">
+                 <label> <b>Top 3 Users:</b></label>
+                 <table id="leaderBoard" class="table">
                      <tr>
                          <th>Rank</th>
                          <th>Eco-precentage</th>
@@ -68,14 +73,20 @@
 
 
             <div class="col-md-4">
-            <label> Your position:</label>
-            <canvas id="chart" width="300" height="300"></canvas>
+                <canvas id="chart" width="300" height="300"></canvas>
+                <br>
+                <p style="color: dimgrey; font-size: small;">Please click the label twice to see your data.</p>
             </div>
+
         </div>
     </div>
 
-
-
      <script src= "../showUsersInfo/showUserInfo.js"></script>
+
+    <div class="navbar" id="cookie_bar" style="visibility: visible">
+        <p style="color:whitesmoke;">By using our services you agree with the use of Cookies. Cookies are only used for functional reasons.</p>
+        <a href="#" class="active" onclick="closeCookieBar()">Close</a>
+    </div>
+
 </body>
 </html>

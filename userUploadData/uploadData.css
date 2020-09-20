@@ -26,7 +26,7 @@ button {background-color: orange !important; border-color: orange !important;}
 }
 
 .backgroundImage {
-    background-image: url('../background.jpg');
+    background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
 
     height: 100vh;

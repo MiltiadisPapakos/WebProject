@@ -2,15 +2,16 @@ let map = L.map("aud_map_id")
 
 let mapUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
 let tiles = new L.TileLayer(mapUrl, {})
+let maxCount = 0
+
 
 map.addLayer(tiles)
-map.setView([38.246242, 21.7350847], 13);
+map.setView([38.246242, 21.7350847], 11);
 
 let heatmapLayer = null
 
 function audAddHeatmapLayer(data) {
 
-    let maxCount = 0
     data.forEach(item => {
         if(Number(item['count']) > maxCount){
             maxCount = Number(item['count'])
@@ -41,4 +42,5 @@ function audRemoveHeatmap(){
         map.removeLayer(heatmapLayer)
         heatmapLayer = null
     }
+    maxCount = 0
 }

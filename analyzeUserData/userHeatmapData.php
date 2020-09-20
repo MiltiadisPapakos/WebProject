@@ -15,12 +15,17 @@ $credentials = json_decode($json, true);
 
 $startingTimestamp = $credentials['startingTimestamp'];
 $endingTimestamp = $credentials['endingTimestamp'];
+$startingIndex = $credentials['startingIndex'];
+$endingIndex = $credentials['endingIndex'];
 
 $query = "SELECT latitude, longitude, count(*) AS \"count\" FROM locations WHERE"
     . " uid like \"{$_SESSION['uid']}\" AND "
     . " key_timestamp >= " . $startingTimestamp . " AND key_timestamp <= " . $endingTimestamp
+    . " AND id BETWEEN $startingIndex AND $endingIndex"
     . " GROUP BY latitude, longitude;";
 
+
+error_log($query);
 
 $results = [];
 $result = $connection->query($query);

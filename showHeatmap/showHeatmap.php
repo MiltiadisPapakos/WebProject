@@ -21,12 +21,15 @@ $endingDay = $credentials['endingDay'];
 $startingHour = $credentials['startingHour'];
 $endingHour = $credentials['endingHour'];
 $activities = $credentials['activities'];
+$startingIndex = $credentials['startingIndex'];
+$endingIndex = $credentials['endingIndex'];
 
 $query = "SELECT latitude, longitude, count(*) AS \"count\" FROM locations WHERE"
-    . " year >= " . $startingYear . " AND year <= " . $endingYear
-    . " AND month >= " . $startingMonth . " AND month <= " . $endingMonth
-    . " AND day_of_week >= " . $startingDay . " AND day_of_week <= " . $endingDay
-    . " AND hour >= " . $startingHour . " AND hour <= " . $endingHour
+    . " id BETWEEN $startingIndex AND $endingIndex"
+    . " AND year BETWEEN " . $startingYear . " AND " . $endingYear
+    . " AND month BETWEEN " . $startingMonth . " AND " . $endingMonth
+    . " AND day_of_week BETWEEN " . $startingDay . " AND " . $endingDay
+    . " AND hour BETWEEN " . $startingHour . " AND " . $endingHour
     . " AND activity in (";
 
 foreach ($activities as $key => $activity){
@@ -38,7 +41,7 @@ foreach ($activities as $key => $activity){
     }
 }
 
-$query = $query . " GROUP BY latitude, longitude;";
+$query = $query . " GROUP BY latitude, latitude";
 
 $results = [];
 $result = $connection->query($query);
@@ -49,4 +52,16 @@ while ($row = $result->fetch_array()){
 
 $connection->close();
 
+//$newResults = [];
+//for ($i = 0; $i < 700; $i = $i + 1){
+//    $newResults[] = $results[$i];
+//}
+//foreach ($value in $results){
+//
+//}
+
+
 echo json_encode($results);
+//echo json_encode(array_slice($results, 0, 699));
+//echo json_encode(array_slice($results, 700, 1399));
+

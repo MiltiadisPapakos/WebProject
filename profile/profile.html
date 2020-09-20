@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" type="text/css" href="../bottomCookieBar/bottomCookieBar.css">
+    <script src="../bottomCookieBar/bottomCookieBar.js" defer> </script>
+
     <link rel="stylesheet" type="text/css" href="profile.css">
 
     <script src="../libraries/blueimp-md5/js/md5.min.js"></script>
@@ -27,12 +30,21 @@
     <div class="container">
 
         <div class="row">
-            <h4 id="h"><b style="color: orange">Edit</b> Your Profile</h4>
+            <h4 id="h"><b style="color: orange">My</b> Profile</h4>
         </div>
 
         <br>
 
         <div class="row">
+
+            <div class="col-sm-3 text-center">
+                <img src="../images/people.png" alt="People" width="200" height="258">
+
+                <br><br><br>
+
+                <button id="profile_log_out" type="button" class="btn btn-primary">Log Out</button>
+
+            </div>
 
             <div class="col-sm-5 text-center">
                 <label>
@@ -116,7 +128,6 @@
 
         </div>
 
-<!--        <br>-->
 
         <div class="row" style="padding-top: 4px;">
             <p
@@ -127,6 +138,11 @@
             </p>
         </div>
 
+    </div>
+
+    <div class="navbar" id="cookie_bar" style="visibility: visible">
+        <p style="color:whitesmoke;">By using our services you agree with the use of Cookies. Cookies are only used for functional reasons.</p>
+        <a href="#" class="active" onclick="closeCookieBar()">Close</a>
     </div>
 
 </body>

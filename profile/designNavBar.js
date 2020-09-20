@@ -10,7 +10,7 @@ getUserData(res => {
             "            <a class=\"py-2 d-none d-md-inline-block\" href=\"http://localhost:63342/WebProject/showUsersInfo/showUserInfo.html\" style=\"color: white\">Show User Data</a>\n" +
             "            <a class=\"py-2 d-none d-md-inline-block\" href=\"http://localhost:63342/WebProject/userUploadData/uploadData.html\" style=\"color: white\">Upload Your Data</a>\n" +
             "            <a class=\"py-2 d-none d-md-inline-block\" href=\"http://localhost:63342/WebProject/analyzeUserData/analyzeUserData.html\" style=\"color: white\">Analyze Your Data</a>\n" +
-            "            <a class=\"py-2 d-none d-md-inline-block\" href=\"#\" style=\"color: white\">Edit Profile</a>\n" +
+            "            <a class=\"py-2 d-none d-md-inline-block\" href=\"#\" style=\"color: white\">My Profile</a>\n" +
             "        </div>"
     }
     else{
@@ -20,7 +20,7 @@ getUserData(res => {
             "            </a>\n" +
             "            <a class=\"py-2 d-none d-md-inline-block\" href=\"http://localhost:63342/WebProject/adminDashboard/adminDashboard.html\" style=\"color: white\">Dashboard</a>\n" +
             "            <a class=\"py-2 d-none d-md-inline-block\" href=\"http://localhost:63342/WebProject/showHeatmap/showHeatmap.html\" style=\"color: white\">Heatmap Data</a>\n" +
-            "            <a class=\"py-2 d-none d-md-inline-block\" href=\"#\" style=\"color: white\">Edit Profile</a>\n" +
+            "            <a class=\"py-2 d-none d-md-inline-block\" href=\"#\" style=\"color: white\"><My></My> Profile</a>\n" +
             "        </div>"
     }
 })

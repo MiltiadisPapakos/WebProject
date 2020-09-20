@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Site Name</title>
+    <link rel="shortcut icon" href="../images/logo_no_text.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bottomCookieBar/bottomCookieBar.css">
+    <script src="../bottomCookieBar/bottomCookieBar.js" defer> </script>
+
     <link rel="stylesheet" type="text/css" href="adminDashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="adminDashboard.js" > </script>
@@ -21,7 +26,7 @@
         </a>
         <a class="py-2 d-none d-md-inline-block" href="#" style="color: white">Dashboard</a>
         <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/showHeatmap/showHeatmap.html" style="color: white">Heatmap Data</a>
-        <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">Edit Profile</a>
+        <a class="py-2 d-none d-md-inline-block" href="http://localhost:63342/WebProject/profile/profile.html" style="color: white">My Profile</a>
     </div>
 </nav>
 <div class='parent'>
@@ -42,6 +47,10 @@
 <script> dashboardDo(); </script>
 
 
+<div class="navbar" id="cookie_bar" style="visibility: visible">
+    <p style="color:whitesmoke;">By using our services you agree with the use of Cookies. Cookies are only used for functional reasons.</p>
+    <a href="#" class="active" onclick="closeCookieBar()">Close</a>
+</div>
 
 </body>
 

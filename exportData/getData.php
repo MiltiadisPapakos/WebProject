@@ -38,6 +38,8 @@ foreach ($activities as $key => $activity){
     }
 }
 
+error_log($query);
+
 $results = [];
 $result = $connection->query($query);
 

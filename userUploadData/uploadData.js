@@ -137,7 +137,6 @@ function getJsonData(event){
 
         })
 
-
         if (formattedData.length > 0) {
             simplePhpPostRequest(
                 phpUrl,
@@ -153,6 +152,11 @@ function getJsonData(event){
             )
 
             formattedData = []
+        }
+        else{
+            alert("There were no locations meeting the criteria to upload in the file you entered. No data were uploaded.")
+            mapUploadButton.textContent = "Upload!"
+            mapUploadButton.removeAttribute("disabled")
         }
 
     })

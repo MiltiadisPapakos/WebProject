@@ -1,5 +1,3 @@
-
-
 let usernameInput = document.querySelector("#profile_username_input")
 let firstNameInput = document.querySelector("#profile_first_name_input")
 let lastNameInput = document.querySelector("#profile_last_name_input")
@@ -14,9 +12,12 @@ let repeatPasswordInput = document.querySelector("#profile_repeat_new_pw_input")
 let okPasswordButton = document.querySelector("#profile_change_pw_ok_button")
 let profileErrorMessageP = document.querySelector("#profile_error_p")
 
+let logOutButton = document.querySelector("#profile_log_out")
+
 updateButton.addEventListener('click', updateUserData)
 changePasswordButton.addEventListener('click', initPasswordChange)
 okPasswordButton.addEventListener('click', changePassword)
+logOutButton.addEventListener('click', logOut)
 
 getUserData(res => {
     usernameInput.value = res['username']
@@ -144,4 +145,17 @@ function isPasswordCorrect(password, verificationPassword){
     }
     profileErrorMessageP.textContent = ""
     return true
+}
+
+function logOut(event){
+    let logOutUrl = "http://localhost:63342/WebProject/profile/logOut.php"
+
+    simplePhpPostRequest(logOutUrl, null,
+        res => {
+            window.location.replace("http://localhost:63342/WebProject/index.html")
+        },
+        reason => {
+
+        })
+
 }

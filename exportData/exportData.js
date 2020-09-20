@@ -1,6 +1,8 @@
 let dataUrl = "http://localhost:63342/WebProject/exportData/getData.php"
 let exportUrl = "http://localhost:63342/WebProject/exportData/exportData.php"
 
+let expActivities = []
+
 function downloadFile(type, data){
     let element = document.createElement('a')
     element.setAttribute('href', 'data:text/' + type + ';charset=utf-8,' + encodeURIComponent(data))
@@ -15,7 +17,17 @@ function downloadFile(type, data){
 }
 
 function onClick(event){
-    let credentials = calculateParameters()
+    for (let option of activitySelector.options){
+        if(option.selected){
+            expActivities.push(option.value)
+        }
+    }
+    if (expActivities.length === 0){
+        alert("Please select at least one activity.")
+        return
+    }
+
+    let credentials = calculateParameters(expActivities, 0, 0)
     if (credentials == null){
         return
     }
