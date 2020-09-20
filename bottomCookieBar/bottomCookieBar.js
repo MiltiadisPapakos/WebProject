@@ -1,5 +1,3 @@
-console.log("!!!!!!!!!!!1")
-
 if(document.cookie.search("accepted_cookies=yes") !== -1) {
     document.getElementById("cookie_bar").style.visibility = 'hidden'
 }

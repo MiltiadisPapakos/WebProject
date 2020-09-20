@@ -19,14 +19,17 @@ $endingDay = $credentials['endingDay'];
 $startingHour = $credentials['startingHour'];
 $endingHour = $credentials['endingHour'];
 $activities = $credentials['activities'];
+$startingIndex = $credentials['startingIndex'];
+$endingIndex = $credentials['endingIndex'];
 
 $query = "SELECT uid, heading, activity, confidence, act_timestamp, vertical_accuracy, velocity, accuracy,"
     . " longitude, latitude, altitude, loc_timestamp"
     . " FROM locations WHERE"
-    . " year >= " . $startingYear . " AND year <= " . $endingYear
-    . " AND month >= " . $startingMonth . " AND month <= " . $endingMonth
-    . " AND day >= " . $startingDay . " AND day <= " . $endingDay
-    . " AND hour >= " . $startingHour . " AND hour <= " . $endingHour
+    . " id BETWEEN " . $startingIndex . " AND " . $endingIndex
+    . " AND year BETWEEN " . $startingYear . " AND " . $endingYear
+    . " AND month BETWEEN " . $startingMonth . " AND " . $endingMonth
+    . " AND day_of_week BETWEEN " . $startingDay . " AND " . $endingDay
+    . " AND hour BETWEEN " . $startingHour . " AND " . $endingHour
     . " AND activity in (";
 
 foreach ($activities as $key => $activity){
@@ -37,8 +40,6 @@ foreach ($activities as $key => $activity){
         $query = $query . "\"" . $activity . "\"" . ");";
     }
 }
-
-error_log($query);
 
 $results = [];
 $result = $connection->query($query);

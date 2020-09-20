@@ -1,5 +1,4 @@
 let dataUrl = "http://localhost:63342/WebProject/exportData/getData.php"
-let exportUrl = "http://localhost:63342/WebProject/exportData/exportData.php"
 
 let expActivities = []
 
@@ -27,41 +26,62 @@ function onClick(event){
         return
     }
 
-    let credentials = calculateParameters(expActivities, 0, 0)
-    if (credentials == null){
-        return
-    }
+    let a = []
+    let i = 0
 
-    simplePhpPostRequest(
-        dataUrl,
-        credentials,
-        res => {
-            res.json()
-                .then(res => {
-                    let type = fileTypSelect.value
-                    let data = null
-
-                    switch (type){
-                        case 'csv':
-                            data = convertJsonArrayToCsv(res)
-                            break
-
-                        case 'json':
-                            data = JSON.stringify(res)
-                            break
-
-                        case 'xml':
-                            data = convertJsonArrayToXml(res)
-                            break
-                    }
-
-                    downloadFile(type, data)
-                })
-        },
-        reason => {
-
+    let interval = setInterval(() => {
+        let credentials = calculateParameters(expActivities, i, i + 99)
+        if (credentials == null){
+            return
         }
-    )
+
+        simplePhpPostRequest(
+            dataUrl,
+            credentials,
+            res => {
+                res.json()
+                    .then(res => {
+
+                        res.forEach(item => {
+                            a.push(item)
+                        })
+                        console.log(i)
+                        console.log(a)
+
+                    })
+            },
+            reason => {
+
+            }
+        )
+
+        if (i > 20000){
+            clearInterval(interval)
+
+            let type = fileTypSelect.value
+            let data = null
+
+            switch (type){
+                case 'csv':
+                    data = convertJsonArrayToCsv(a)
+                    break
+
+                case 'json':
+                    data = JSON.stringify(a)
+                    break
+
+                case 'xml':
+                    data = convertJsonArrayToXml(a)
+                    break
+            }
+
+            downloadFile(type, data)
+        }
+
+        i += 100;
+
+    }, 250)
+
 
 }
 
