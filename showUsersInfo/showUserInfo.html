@@ -70,41 +70,6 @@
             <div class="col-md-4">
             <label> Your position:</label>
             <canvas id="chart" width="300" height="300"></canvas>
-            <script>
-        const ctx = document.getElementById('chart').getContext('2d');
-        const xlabels = [];
-        const yval = [];
-        const myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: xlabels,
-                datasets: [{
-                    label: 'Eco-Percentage',
-                    data: yval,
-                    backgroundColor: [
-                        'rgb(255,165,0)',
-
-                    ],
-                    borderColor: [
-                        'rgb(255,69,0)',
-
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: false,
-
-                scales: {
-                    display: true,
-                yAxes: [{
-                    ticks: {
-                    }
-                }]
-            }
-        }
-        });
-    </script>
             </div>
         </div>
     </div>

@@ -83,11 +83,46 @@ function createTable(data, table, userUid) {
 
 
     function setValuesInChart(data) {
+        const ctx = document.getElementById('chart').getContext('2d');
+        const xlabels = [];
+        const yval = [];
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: xlabels,
+                datasets: [{
+                    label: 'Eco-Percentage',
+                    data: yval,
+                    backgroundColor: [
+                        'rgb(255,165,0)',
+
+                    ],
+                    borderColor: [
+                        'rgb(255,69,0)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: false,
+
+                scales: {
+                    display: true,
+                    yAxes: [{
+                        ticks: {
+                        }
+                    }]
+                }
+            }
+        });
         data.forEach(rowData => {
             let eco_percentage = rowData['eco_percentage'] * 100
             let month_s = rowData['month_s']
+
             xlabels.push(month_s)
             yval.push(eco_percentage)
+
         })
 
 
