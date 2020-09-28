@@ -15,7 +15,7 @@ function isPasswordCorrect(password, verificationPassword){
         errorMessageSpan.textContent = "The password must contain at least 1 upper case character."
         return false
     }
-    if (!/[*123456789]/.test(password)){
+    if (!/[*0123456789]/.test(password)){
         errorMessageSpan.textContent = "The password must contain at least 1 number."
         return false
     }
