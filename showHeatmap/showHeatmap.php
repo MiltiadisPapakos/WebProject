@@ -44,7 +44,6 @@ foreach ($activities as $key => $activity){
 $query = $query . " GROUP BY latitude, latitude";
 
 
-
 $results = [];
 $result = $connection->query($query);
 

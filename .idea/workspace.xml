@@ -13,14 +13,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Final bug fixes and UI changes.">
+    <list default="true" id="314d898d-2311-49ce-834a-b730c1da0846" name="Default Changelist" comment="Changes in data used.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/showHeatmap/showHeatmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/showHeatmap/showHeatmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/showUsersInfo/getLeaderBoard.php" beforeDir="false" afterPath="$PROJECT_DIR$/showUsersInfo/getLeaderBoard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signupLogin/orange.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signupLogin/orange_map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signupLogin/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/signupLogin/signup/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +65,19 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$/signupLogin" />
-      <recent name="$PROJECT_DIR$/libraries" />
-      <recent name="$PROJECT_DIR$/signup" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/manageManyRecords" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/userUploadData" />
       <recent name="$PROJECT_DIR$/signupLogin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/signupLogin" />
+      <recent name="$PROJECT_DIR$/libraries" />
+      <recent name="$PROJECT_DIR$/signup" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -187,7 +182,7 @@
       <workItem from="1600630612120" duration="3924000" />
       <workItem from="1601044370312" duration="1526000" />
       <workItem from="1601215560830" duration="10518000" />
-      <workItem from="1601293823916" duration="1507000" />
+      <workItem from="1601293823916" duration="2168000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1598171427032</created>
@@ -378,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600633617390</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Changes in data used.">
+      <created>1601295443960</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1601295443960</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +399,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor changes" />
     <MESSAGE value="Added log in screen and functionality." />
     <MESSAGE value="Added forgot password screen and functionality.&#10;Added sessions.&#10;Fixed small bugs." />
     <MESSAGE value="Fixed bug." />
@@ -422,7 +423,8 @@
     <MESSAGE value="Updated Log In and Sign Up UI." />
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Final bug fixes and UI changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Final bug fixes and UI changes." />
+    <MESSAGE value="Changes in data used." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in data used." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1233" y="29" width="824" height="691" key="#CLI_Interpreters" timestamp="1599002573485">
@@ -604,11 +606,12 @@
     <state x="124" y="27" width="900" height="741" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598977280222" />
     <state x="1138" y="27" width="1142" height="741" key="SettingsEditor/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1598993998715" />
     <state x="1138" y="27" width="1022" height="737" key="SettingsEditor/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1599002574888" />
-    <state x="556" y="155" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600633619617">
+    <state x="556" y="155" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601295446086">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="-351" y="65" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@0.27.1024.741" timestamp="1598806474106" />
     <state x="1302" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1024.741/1024.0.1366.768@1024.0.1366.768" timestamp="1599147389428" />
+    <state x="556" y="155" key="Vcs.Push.Dialog.v2/0.27.1366.741/1366.0.1360.768@0.27.1366.741" timestamp="1601295446086" />
     <state x="556" y="155" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1600633619617" />
     <state x="1024" y="155" width="1366" height="517" key="Vcs.Push.Dialog.v2/0.27.2390.741@0.27.2390.741" timestamp="1598345588585" />
     <state x="1580" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/1024.0.1366.768/0.27.1024.741@1024.0.1366.768" timestamp="1600206036634" />
